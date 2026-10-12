@@ -1,0 +1,61 @@
+task_id,title,wave,dependencies,requirements,linked_tests,scope,status
+IMP-001,Monorepo and shared TypeScript foundations,1,,0,0,repo/apps/packages scaffolding,PLANNED
+IMP-002,Canonical Project Model types and IDs,1,IMP-001,23,23,packages/project-model,PLANNED
+IMP-003,"Project persistence, atomic save and migration",1,IMP-002,11,11,packages/project-model persistence,PLANNED
+IMP-004,"Project Operations, copy/duplicate and history",1,IMP-002,4,4,packages/project-model operations + Constructor state bridge,PLANNED
+IMP-005,Validation Engine core,1,IMP-002,12,12,packages/project-model/validation,PLANNED
+IMP-006,Virtual Asset Library core,1,IMP-002,9,8,project-model asset registry + asset service,PLANNED
+IMP-007,SVG structured import,2,IMP-006;IMP-004,6,6,Constructor import service,PLANNED
+IMP-008,Constructor application shell and project lifecycle,2,IMP-003;IMP-004;IMP-005,3,3,apps/constructor,PLANNED
+IMP-009,Designer Canvas viewport and grid,2,IMP-008,1,1,apps/constructor designer,PLANNED
+IMP-010,Element editing tools,2,IMP-009;IMP-004,3,3,apps/constructor designer,PLANNED
+IMP-011,Asset Library Constructor UI and relink,2,IMP-006;IMP-008,3,3,apps/constructor asset UI,PLANNED
+IMP-012,Collect Project,2,IMP-003;IMP-006,2,2,Constructor project services,PLANNED
+IMP-013,Action registry and Behavior Flow engine,2,IMP-002,12,12,packages/actions + runtime-engine,PLANNED
+IMP-014,Core Action handlers,3,IMP-013,9,9,packages/actions,PLANNED
+IMP-015,Screen/Page RuntimeSession lifecycle,3,IMP-013;IMP-002,17,17,packages/runtime-engine,PLANNED
+IMP-016,Runtime variables and interaction locks,3,IMP-015;IMP-014,5,5,packages/runtime-engine,PLANNED
+IMP-017,Base DOM/CSS/SVG runtime renderer,3,IMP-015,7,7,packages/runtime-engine renderer,PLANNED
+IMP-018,Page navigation and visual transitions,3,IMP-015;IMP-017;IMP-014,0,0,runtime navigation/transition layer,PLANNED
+IMP-019,Popup runtime,3,IMP-015;IMP-017;IMP-014,2,2,runtime popup layer,PLANNED
+IMP-020,Page Timeline engine,3,IMP-015;IMP-013,0,0,runtime timeline,PLANNED
+IMP-021,Screen persistent layer and scroll flow,3,IMP-017;IMP-015,3,3,runtime + Constructor model integration,PLANNED
+IMP-022,Screen Media Player core,4,IMP-015;IMP-017;IMP-014;IMP-006,11,11,packages/media + runtime,PLANNED
+IMP-023,Playlist engine,4,IMP-022,9,8,packages/media,PLANNED
+IMP-024,Media Timeline and playback ranges,4,IMP-022;IMP-013,5,5,packages/media timeline,PLANNED
+IMP-025,Page background media with audio,4,IMP-017;IMP-022,4,4,runtime page renderer/media,PLANNED
+IMP-026,Playback controls and preserved input control,4,IMP-022;IMP-014,0,0,media controls/input,PLANNED
+IMP-027,Targeted media preparation and preload,4,IMP-022;IMP-023,4,3,packages/media,PLANNED
+IMP-028,"Component definitions, revisions and instances",4,IMP-004;IMP-010,13,13,project-model + Constructor + runtime compile support,PLANNED
+IMP-029,Widget registry and common runtime contract,4,IMP-013;IMP-017;IMP-006,9,9,packages/widgets,PLANNED
+IMP-030,Gallery Widget,5,IMP-029,1,1,packages/widgets/gallery,PLANNED
+IMP-031,Image Viewer Widget,5,IMP-029,1,1,packages/widgets/image-viewer,PLANNED
+IMP-032,Quiz Widget,5,IMP-029;IMP-016,1,1,packages/widgets/quiz,PLANNED
+IMP-033,Form Widget,5,IMP-029;IMP-016,0,0,packages/widgets/form,PLANNED
+IMP-034,Mini-game Widget framework,5,IMP-029,1,1,packages/widgets/minigame,PLANNED
+IMP-035,Screensaver and idle engine,5,IMP-015;IMP-022;IMP-019,9,9,runtime idle/system visual,PLANNED
+IMP-036,Error/Fallback Visual and local degradation,5,IMP-017;IMP-005,6,6,runtime error boundary,PLANNED
+IMP-037,Runtime Compiler,5,IMP-002;IMP-005;IMP-006;IMP-028;IMP-029,19,19,build/compiler,PLANNED
+IMP-038,"Build materialization, manifest and atomic publish",5,IMP-037,8,8,build pipeline,PLANNED
+IMP-039,Constructor Preview runtime,6,IMP-037;IMP-017;IMP-022,10,10,apps/constructor preview,PLANNED
+IMP-040,Preview physical display mode,6,IMP-039,1,1,Constructor preview/display service,PLANNED
+IMP-041,TCP/UDP Network Service,6,IMP-013,11,11,packages/network + Player Main,PLANNED
+IMP-042,Network diagnostics and manual send,6,IMP-041,4,4,network/dev tools,PLANNED
+IMP-043,Player application shell and Build loading,6,IMP-038;IMP-017;IMP-022,6,6,apps/player,PLANNED
+IMP-044,Physical display discovery and mapping,6,IMP-043,10,10,Player Main + technician UI,PLANNED
+IMP-045,Same-PC multi-display RuntimeCoordinator,6,IMP-044;IMP-015,0,0,Player runtime coordinator,PLANNED
+IMP-046,Player Developer Mode and diagnostics,7,IMP-043;IMP-042;IMP-044,9,9,Player dev overlay,PLANNED
+IMP-047,Renderer fault recovery and watchdog integration,7,IMP-043;IMP-044,5,5,Player Main/runtime,PLANNED
+IMP-048,Player local config persistence and reinstall survival,7,IMP-043,1,1,Player local config,PLANNED
+IMP-049,Content Admin Mode,7,IMP-008;IMP-011;IMP-028,3,3,apps/constructor admin mode,PLANNED
+IMP-050,Project visual system and project fonts,7,IMP-006;IMP-010;IMP-017,1,1,Constructor + renderer + Build,PLANNED
+IMP-051,"Multi-PC node connection, identity and clock sync",8,IMP-041;IMP-043,8,7,packages/network sync + Player Main,PLANNED
+IMP-052,Distributed PREPARE/READY/EXECUTE coordinator,8,IMP-051;IMP-045;IMP-022,4,4,runtime/network distributed coordinator,PLANNED
+IMP-053,Multi-PC disconnect/reconnect fault tolerance,8,IMP-052,5,5,distributed runtime,PLANNED
+IMP-054,Constructor Problems panel and validation UX,8,IMP-005;IMP-008,3,3,apps/constructor validation UI,PLANNED
+IMP-055,Runtime/Build validation integration hardening,8,IMP-038;IMP-029;IMP-028,3,3,validation/build integration,PLANNED
+IMP-056,Kiosk startup and Windows deployment behavior,9,IMP-043;IMP-047;IMP-048,0,0,apps/player + Windows integration,PLANNED
+IMP-057,V1 compatibility acceptance suite,9,IMP-026;IMP-044;IMP-046;IMP-055,0,0,tests/compatibility,PLANNED
+IMP-058,Reference CASE acceptance suite,9,IMP-030;IMP-031;IMP-032;IMP-034;IMP-039,0,0,tests/reference-cases,PLANNED
+IMP-059,Original TZ acceptance suite,9,IMP-049;IMP-050;IMP-056;IMP-055,0,0,tests/acceptance,PLANNED
+IMP-060,"Soak, chaos and museum stability suite",10,IMP-047;IMP-053;IMP-057;IMP-058;IMP-059,0,0,tests/stability,PLANNED

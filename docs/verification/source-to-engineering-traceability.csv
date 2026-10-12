@@ -1,0 +1,355 @@
+source_id,source_family,source_text,trace_status,disposition,canonical_mapping,note
+V1-F001,V1,Create Player project,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F002,V1,Save project JSON,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F003,V1,Open saved JSON project,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F004,V1,Build deployable project to directory,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F005,V1,Copy Content into build,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F006,V1,Copy system assets into build,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F007,V1,Remap asset paths during build,VERIFIED,Covered,"ENG-BUILD-010..033; A-005,A-026",
+V1-F008,V1,Preview in separate window,VERIFIED,Covered,ENG-CONSTR-024..026; A-027,
+V1-F009,V1,Auto-open last Player project at startup,VERIFIED,Covered,ENG-PLAYER-010..014; A-028,
+V1-F010,V1,Multiple Screens/project,VERIFIED,Covered,ENG-CONSTR-013..015; ENG-RT-010..018,
+V1-F011,V1,Create Screen,VERIFIED,Covered,ENG-CONSTR-013..015; ENG-RT-010..018,
+V1-F012,V1,Delete Screen,VERIFIED,Covered,ENG-CONSTR-013..015; ENG-RT-010..018,
+V1-F013,V1,Screen name,VERIFIED,Covered,ENG-CONSTR-013..015; ENG-RT-010..018,
+V1-F014,V1,Per-Screen resolution,VERIFIED,Covered,ENG-CONSTR-013..015; ENG-RT-010..018,
+V1-F015,V1,Independent state/content per Screen,VERIFIED,Covered,ENG-CONSTR-013..015; ENG-RT-010..018,
+V1-F016,V1,Background/canvas media per Screen,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F017,V1,Image as Screen background,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F018,V1,Video as Screen background,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F019,V1,Fit media in Canvas,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F020,V1,Canvas video sound toggle,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F021,V1,Transition/appearance content↔scene,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F022,V1,Instant transition,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F023,V1,Smooth/fade transition,VERIFIED,Covered,"ENG-MEDIA-024..025; A-019,A-021",
+V1-F024,V1,Add Button,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F025,V1,Add Text,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F026,V1,Add Image,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F027,V1,Drag/drop objects on Canvas,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F028,V1,Move objects,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F029,V1,8-direction resize,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F030,V1,X/Y/W/H,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F031,V1,Select object,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F032,V1,Delete object,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F033,V1,Copy,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F034,V1,Paste,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F035,V1,Duplicate,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F036,V1,Undo,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F037,V1,Pan Canvas,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F038,V1,Zoom Canvas,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F039,V1,Fit Canvas to viewport,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F040,V1,Lock Canvas editing,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F041,V1,Show Grid,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F042,V1,Grid columns,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F043,V1,Grid rows,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F044,V1,Snap to Grid,VERIFIED,Covered,ENG-CONSTR-016..019; A-007,
+V1-F045,V1,Button text,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F046,V1,Button color,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F047,V1,Button background image,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F048,V1,Button background fit,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F049,V1,Button border radius,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F050,V1,Button icon,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F051,V1,Icon size,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F052,V1,Font family,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F053,V1,Installed system fonts,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F054,V1,Font size,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F055,V1,Text color,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F056,V1,Horizontal alignment,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F057,V1,Vertical alignment,VERIFIED,Covered,ENG-CONSTR-018..019; A-003,
+V1-F058,V1,Assign Content to UI element,VERIFIED,Covered,"ENG-RT-001..007; A-013,A-014",
+V1-F059,V1,Assign Content to Canvas,VERIFIED,Covered,"ENG-RT-001..007; A-013,A-014",
+V1-F060,V1,Assign command to Button,VERIFIED,Covered,"ENG-RT-001..007; A-013,A-014",
+V1-F061,V1,Limit command action to Screens,VERIFIED,Covered,"ENG-RT-001..007; A-013,A-014",
+V1-F062,V1,Assign keyboard key to Button,VERIFIED,Covered,"ENG-RT-001..007; A-013,A-014",
+V1-F063,V1,Import SVG template,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F064,V1,Parse SVG structure,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F065,V1,Import Screen resolution/background from SVG,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F066,V1,Create Image elements from SVG,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F067,V1,Create Button elements from SVG,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F068,V1,Create Text elements from SVG,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F069,V1,Extract typography/geometry from SVG,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F070,V1,Materialize external SVG assets into project system assets,VERIFIED,Covered,ENG-CONSTR-031; ENG-BUILD-013..023,
+V1-F071,V1,Choose root Content directory,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F072,V1,Build Content tree from filesystem,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F073,V1,Nested Content folders,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F074,V1,Recognize image files,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F075,V1,Recognize video files,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F076,V1,Single file playable content,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F077,V1,Folder as playable sequence,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F078,V1,Mixed Images+Videos sequence,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F079,V1,Sequence order,VERIFIED,Covered,ENG-CONSTR-020..023; ENG-MEDIA-010..018,
+V1-F080,V1,Previous item,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F081,V1,Next item,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F082,V1,Play/Pause,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F083,V1,Seek backward,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F084,V1,Seek forward,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F085,V1,Progress display,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F086,V1,Image duration,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F087,V1,Loop content,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F088,V1,Loop folder sequence,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F089,V1,Loop selected video range,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F090,V1,Loop Start time,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F091,V1,Loop End time,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F092,V1,Video sound on/off,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F093,V1,Volume per video,VERIFIED,Covered,ENG-MEDIA-013..029,
+V1-F094,V1,Appearance mode per Content,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F095,V1,Start Command for Content,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F096,V1,Finish Command for Content,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F097,V1,Start Key for Content,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F098,V1,Finish Key for Content,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F099,V1,Timeline Commands inside Video,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F100,V1,Timeline command at specified second,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F101,V1,Timeline action Play,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F102,V1,Outgoing network command from Timeline,VERIFIED,Covered,"ENG-MEDIA-026..029; ENG-NET-017..021; A-013,A-021",
+V1-F103,V1,Repeating Start Command,VERIFIED,Covered,"ENG-RT-002..007; ENG-MEDIA-010..023; A-013,A-016",
+V1-F104,V1,Queue for repeating Start Command,VERIFIED,Covered,"ENG-RT-002..007; ENG-MEDIA-010..023; A-013,A-016",
+V1-F105,V1,Sequential Content switching via one command,VERIFIED,Covered,"ENG-RT-002..007; ENG-MEDIA-010..023; A-013,A-016",
+V1-F106,V1,Reset command queue initial state,VERIFIED,Covered,"ENG-RT-002..007; ENG-MEDIA-010..023; A-013,A-016",
+V1-F107,V1,Delayed Command,VERIFIED,Covered,"ENG-RT-002..007; ENG-MEDIA-010..023; A-013,A-016",
+V1-F108,V1,Outgoing command IP,VERIFIED,Covered,ENG-NET-010..021,
+V1-F109,V1,Outgoing command Port,VERIFIED,Covered,ENG-NET-010..021,
+V1-F110,V1,Default IP/Port endpoint,VERIFIED,Covered,ENG-NET-010..021,
+V1-F111,V1,Multiple listening ports,VERIFIED,Covered,ENG-NET-010..021,
+V1-F112,V1,Receive external network commands,VERIFIED,Covered,ENG-NET-010..021,
+V1-F113,V1,Send network commands,VERIFIED,Covered,ENG-NET-010..021,
+V1-F114,V1,Match command by IP/port/source,VERIFIED,Covered,ENG-NET-010..021,
+V1-F115,V1,Command to transition/activate Screen,VERIFIED,Covered,"ENG-RT-010..034; A-014,A-024",
+V1-F116,V1,Return Commands per Screen,VERIFIED,Covered,"ENG-RT-010..034; A-014,A-024",
+V1-F117,V1,Multiple Return Commands per Screen,VERIFIED,Covered,"ENG-RT-010..034; A-014,A-024",
+V1-F118,V1,Global Return to Previous State Command,VERIFIED,Covered,"ENG-RT-010..034; A-014,A-024",
+V1-F119,V1,Global Return to Initial State Command,VERIFIED,Covered,"ENG-RT-010..034; A-014,A-024",
+V1-F120,V1,Global Animation Command,VERIFIED,Covered,"ENG-RT-010..034; A-014,A-024",
+V1-F121,V1,Allow/disallow commands during Video,VERIFIED,Covered,"ENG-RT-024..025; A-015,A-016",
+V1-F122,V1,Temporary action blocking after external command,VERIFIED,Covered,"ENG-RT-024..025; A-015,A-016",
+V1-F123,V1,Splash/Idle Content,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F124,V1,Splash Content assigned to specific Screen,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F125,V1,Max one Splash assignment per Screen,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F126,V1,Splash timeout per Screen,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F127,V1,Global fallback Splash timeout,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F128,V1,Exit Splash on user action,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F129,V1,Transition Splash↔Scene,VERIFIED,Covered,ENG-RT-027..028; A-023,
+V1-F130,V1,Screenless Mode,VERIFIED,Revised/Covered,"ENG-MEDIA-003..004,025; A-036",
+V1-F131,V1,Server Mode,VERIFIED,Covered,ENG-SYNC-010..022; A-029,
+V1-F132,V1,Keyboard playback control,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F133,V1,Configurable keyboard bindings Previous/Back/Pause/Forward/Next,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F134,V1,Mouse playback control,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F135,V1,Configurable mouse bindings,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F136,V1,Keyboard navigation across UI buttons,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F137,V1,Previous/Next selected button,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F138,V1,Press selected button,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F139,V1,Control UI button selection via external commands,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F140,V1,Exit content playback on configured user action,VERIFIED,Covered,"A-014,A-015; preserved input contract (atomic ENG expansion still required)",
+V1-F141,V1,Specialized Playback Navigation panel,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F142,V1,Home control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F143,V1,Previous control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F144,V1,Backward control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F145,V1,Play/Pause control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F146,V1,Forward control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F147,V1,Next control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F148,V1,Progress control,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F149,V1,Visual edit position/size Playback Controls,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F150,V1,Custom graphics Playback Controls,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F151,V1,Separate Pause graphic,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F152,V1,Progress track/fill styling,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F153,V1,Auto-hide Navigation at idle,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F154,V1,Global Show/Hide Navigation,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F155,V1,Network commands directly for Playback Controls,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F156,V1,Show Exit Button setting,VERIFIED,Covered,ENG-MEDIA-019..023; A-019; preserved Playback Controls contract (atomic ENG expansion still required),
+V1-F157,V1,Detect physical displays,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F158,V1,Display metadata resolution/position/scale/primary,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F159,V1,Assign Screen→Physical Display,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F160,V1,One Screen not assigned to multiple displays simultaneously,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F161,V1,One Display not assigned multiple Screens simultaneously,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F162,V1,Save Display assignments in project,VERIFIED,Revised/Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F163,V1,Separate Player windows for assigned displays,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F164,V1,Sync project between display windows,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F165,V1,Filter commands by Screen/display window,VERIFIED,Covered,"ENG-DISP-001..004; ENG-PLAYER-015..020; A-024,A-028",
+V1-F166,V1,Preload used project assets,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F167,V1,Preload Images,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F168,V1,Preload Videos,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F169,V1,Preload Screen backgrounds,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F170,V1,Preload UI/system assets,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F171,V1,Preloading progress,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F172,V1,Preloading timeout/error handling,VERIFIED,Revised/Covered,ENG-MEDIA-030..033; A-033 (Revised),
+V1-F173,V1,Check missing media assets,VERIFIED,Covered,ENG-VAL-017; ENG-BUILD-015..016,
+V1-F174,V1,Player Developer Overlay,VERIFIED,Covered,"ENG-PLAYER-021..028; ENG-NET-020..021; A-027,A-028",
+V1-F175,V1,View loaded project JSON in dev UI,VERIFIED,Covered,"ENG-PLAYER-021..028; ENG-NET-020..021; A-027,A-028",
+V1-F176,V1,Network command log,VERIFIED,Covered,"ENG-PLAYER-021..028; ENG-NET-020..021; A-027,A-028",
+V1-F177,V1,Manually send network command from dev UI,VERIFIED,Covered,"ENG-PLAYER-021..028; ENG-NET-020..021; A-027,A-028",
+V1-F178,V1,View current Screen/status in dev UI,VERIFIED,Covered,"ENG-PLAYER-021..028; ENG-NET-020..021; A-027,A-028",
+TZ-F001,TZ,Constructor creates and configures local interactive reference systems,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,A-001..A-006,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F002,TZ,"System targets museums, exhibitions and multimedia installations",SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,A-001..A-006,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F003,TZ,Constructor is reusable across different projects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,A-001..A-006,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F004,TZ,Architecture includes Constructor authoring application,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,A-001..A-006,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F005,TZ,Architecture includes Player/Runtime application,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,A-001..A-006,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F006,TZ,Architecture supports administrative content editing and external control,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,A-001..A-006,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F007,TZ,Support horizontal screen formats,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F008,TZ,Support vertical screen formats,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F009,TZ,Support non-standard aspect ratios,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F010,TZ,Support widescreen formats,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F011,TZ,Support non-standard resolutions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F012,TZ,Support kiosks/panels as target displays,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F013,TZ,Store Screen resolution through project Screen width and height,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..015; A-003,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F014,TZ,Support scroll/landing application structure,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F015,TZ,Support ordered sections in scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F016,TZ,Support text blocks in scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F017,TZ,Support image blocks in scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F018,TZ,Support video blocks in scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F019,TZ,Support interactive blocks in scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F020,TZ,Support scrolling through long content,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F021,TZ,Support transitions within scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F022,TZ,Support fixed UI and anchor-style navigation in scroll applications,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-CONSTR-013..019; A-017,A-032",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F023,TZ,Support Page/Screen application structure,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F024,TZ,Support multiple Pages within a Screen,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F025,TZ,Support transitions between Pages,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F026,TZ,Support Next navigation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F027,TZ,Support Back navigation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F028,TZ,Support Home navigation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F029,TZ,Support navigation scenarios,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F030,TZ,Support sections/subsections/cards hierarchy,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F031,TZ,Support return to idle/start behavior,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-013..019; ENG-RT-010..030,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F032,TZ,Support Button objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F033,TZ,Support Tab objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F034,TZ,Support Card objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F035,TZ,Support Menu objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F036,TZ,Support Image objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F037,TZ,Support Video objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F038,TZ,Support Text objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F039,TZ,Support Icon objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F040,TZ,Support decorative objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F041,TZ,Support interactive zones,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F042,TZ,Support Popup objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F043,TZ,Support Frame objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F044,TZ,Support Gallery/Slider objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F045,TZ,Store object position,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F046,TZ,Store object size,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F047,TZ,Store object layer/order,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F048,TZ,Store object visibility,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F049,TZ,Store object state,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F050,TZ,Support click/touch action assignment,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-CONSTR-016..019; ENG-RT-001..034,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F051,TZ,Support project-level visual styling,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F052,TZ,Support Page-level style overrides,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F053,TZ,Support colors/background media/fonts/icons/buttons/menu/decor styling,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F054,TZ,Support visual states styling,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F055,TZ,Support replacement of graphic assets for reskinning,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F056,TZ,Support reusable visual templates,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F057,TZ,Support more than one visual theme/skin concept,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F058,TZ,Allow per-Page visual overrides,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F059,TZ,Separate styling from interaction logic,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F060,TZ,Allow reskin without changing project logic,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F061,TZ,Allow adaptation to exhibition/brand identity,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F062,TZ,Allow verification of visual result across target resolutions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Partial/Deferred where noted,"A-031,A-032; PARTIAL/DEFERRED full multi-theme switching",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F063,TZ,Configure Page/Screen transition type,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F064,TZ,Configure transition duration,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F065,TZ,Configure transition direction,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F066,TZ,Support appear/disappear transitions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F067,TZ,Support slide transitions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F068,TZ,Support scale transitions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F069,TZ,Support fade transitions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F070,TZ,Transition system is extensible/editable and assignable per Page/block,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-017,A-019,A-022",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F071,TZ,Animate Buttons/Tabs/Cards,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F072,TZ,Animate Images/Text,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F073,TZ,Animate decorative/interactive objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F074,TZ,Animate Menu/Frame objects,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F075,TZ,Support appear/disappear animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F076,TZ,Support opacity animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F077,TZ,Support scale animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F078,TZ,Support movement animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F079,TZ,Support state/click/hover-touch animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F080,TZ,Support looping/idle animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"A-013,A-014,A-017",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F081,TZ,Support photo/image media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F082,TZ,Support video media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F083,TZ,Support animation media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F084,TZ,Support audio media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F085,TZ,Support graphic media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F086,TZ,Support image sequences,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F087,TZ,Support galleries,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F088,TZ,Allow adding media to project,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F089,TZ,Allow placing media in frames,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F090,TZ,Allow scrolling media content,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F091,TZ,Allow gallery/slider creation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F092,TZ,Support media looping/autotransition,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F093,TZ,Support explicit media ordering,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-MEDIA-010..033,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F094,TZ,Administrative mode can edit exposed text,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F095,TZ,Administrative mode can replace exposed images/video,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F096,TZ,Administrative mode can reorder exposed content,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F097,TZ,Administrative mode may add cards/blocks where explicitly permitted,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F098,TZ,Administrative mode can control section visibility,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F099,TZ,Administrative mode can edit idle parameters,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F100,TZ,Administrative changes are stored in local project data,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F101,TZ,Administrative editing is available without editing implementation code,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F102,TZ,Administrative architecture may be integrated in Constructor rather than a separate application,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered/Revised; structural creation deferred,ENG-CONSTR-028..030; REVISED/DEFERRED structural creation,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F103,TZ,Receive TCP/IP external commands,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F104,TZ,External command can activate Screen/Page/section,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F105,TZ,External command can start animation,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F106,TZ,External command can control video/media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F107,TZ,External command can return Home/Idle,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F108,TZ,External command can lock interaction,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F109,TZ,External command can unlock interaction,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F110,TZ,External command can start scenario,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F111,TZ,External command can stop scenario,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F112,TZ,External command can reset scenario,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-NET-010..021,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F113,TZ,Allow external iRidi-equivalent control through supported network protocol,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Revised/Covered by generic TCP/UDP,ENG-NET-010..021; REVISED generic TCP/UDP first,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F114,TZ,External control can activate key Screen/Page/section,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Revised/Covered by generic TCP/UDP,ENG-NET-010..021; REVISED generic TCP/UDP first,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F115,TZ,External control can control idle mode,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Revised/Covered by generic TCP/UDP,ENG-NET-010..021; REVISED generic TCP/UDP first,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F116,TZ,External control can control media,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Revised/Covered by generic TCP/UDP,ENG-NET-010..021; REVISED generic TCP/UDP first,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F117,TZ,External control can change states,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Revised/Covered by generic TCP/UDP,ENG-NET-010..021; REVISED generic TCP/UDP first,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F118,TZ,External control can start/control scenarios,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Revised/Covered by generic TCP/UDP,ENG-NET-010..021; REVISED generic TCP/UDP first,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F119,TZ,Support start/idle screen,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-RT-027..028; A-023,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F120,TZ,Support animated screensaver,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-RT-027..028; A-023,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F121,TZ,Support looping idle video,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-RT-027..028; A-023,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F122,TZ,Support idle CTA,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-RT-027..028; A-023,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F123,TZ,Support inactivity timeout,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-RT-027..028; A-023,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F124,TZ,Support wake/exit idle by touch or external command,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,ENG-RT-027..028; A-023,Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F125,TZ,Runtime content/configuration operates locally/offline,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-PLAYER-010..028; A-034,A-035",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F126,TZ,Runtime handles optimized large images/video and smooth transitions,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-PLAYER-010..028; A-034,A-035",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F127,TZ,Runtime is designed for long-running stability and protection from repeated-action freezes,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-PLAYER-010..028; A-034,A-035",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+TZ-F128,TZ,Player supports kiosk-style automatic startup/fullscreen/recovery behavior,SEMANTICALLY_VERIFIED_FROM_PRIMARY_TZ,Covered,"ENG-PLAYER-010..028; A-034,A-035",Atomic label reconstructed from primary approved TZ; not claimed as verbatim historical atomization wording.
+CASE-F001,CASE,Idle/waiting screen,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-RT-027..028; A-023,Reference-case capability inventory.
+CASE-F002,CASE,User action exits splash,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-RT-027..028; A-023,Reference-case capability inventory.
+CASE-F003,CASE,Multiple independent screens/scenes,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..019; ENG-RT-010..030,Reference-case capability inventory.
+CASE-F004,CASE,Button navigation,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..019; ENG-RT-010..030,Reference-case capability inventory.
+CASE-F005,CASE,Main menu,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..019; ENG-RT-010..030,Reference-case capability inventory.
+CASE-F006,CASE,Section selection,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..019; ENG-RT-010..030,Reference-case capability inventory.
+CASE-F007,CASE,Section → material/exhibit hierarchy,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..019; ENG-RT-010..030,Reference-case capability inventory.
+CASE-F008,CASE,Previous/Home navigation,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..019; ENG-RT-010..030,Reference-case capability inventory.
+CASE-F009,CASE,Popup overlay,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-RT-029..030; A-022,Reference-case capability inventory.
+CASE-F010,CASE,Open details in popup,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-RT-029..030; A-022,Reference-case capability inventory.
+CASE-F011,CASE,Close popup without changing base screen,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-RT-029..030; A-022,Reference-case capability inventory.
+CASE-F012,CASE,Text blocks,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"ENG-CONSTR-017..019; A-003,A-032",Reference-case capability inventory.
+CASE-F013,CASE,Images,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"ENG-CONSTR-017..019; A-003,A-032",Reference-case capability inventory.
+CASE-F014,CASE,Image + caption,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"ENG-CONSTR-017..019; A-003,A-032",Reference-case capability inventory.
+CASE-F015,CASE,Text buttons,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"ENG-CONSTR-017..019; A-003,A-032",Reference-case capability inventory.
+CASE-F016,CASE,Graphic/icon buttons,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"ENG-CONSTR-017..019; A-003,A-032",Reference-case capability inventory.
+CASE-F017,CASE,Cards,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"ENG-CONSTR-017..019; A-003,A-032",Reference-case capability inventory.
+CASE-F018,CASE,Gallery with multiple images,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Gallery,Reference-case capability inventory.
+CASE-F019,CASE,Sequential gallery paging,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Gallery,Reference-case capability inventory.
+CASE-F020,CASE,Previous/Next gallery controls,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Gallery,Reference-case capability inventory.
+CASE-F021,CASE,Study/detail screen,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Image Viewer,Reference-case capability inventory.
+CASE-F022,CASE,Image zoom,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Image Viewer,Reference-case capability inventory.
+CASE-F023,CASE,Pan zoomed image,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Image Viewer,Reference-case capability inventory.
+CASE-F024,CASE,Reset image,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Image Viewer,Reference-case capability inventory.
+CASE-F025,CASE,Long vertical content,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,A-017; Project Data Model: Page/Scrollable Container,Reference-case capability inventory.
+CASE-F026,CASE,Vertical scrolling,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,A-017; Project Data Model: Page/Scrollable Container,Reference-case capability inventory.
+CASE-F027,CASE,Arbitrary scroll content height,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,A-017; Project Data Model: Page/Scrollable Container,Reference-case capability inventory.
+CASE-F028,CASE,Content larger than viewport,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,A-017; Project Data Model: Page/Scrollable Container,Reference-case capability inventory.
+CASE-F029,CASE,Animated screen transitions,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"A-017,A-019,A-022",Reference-case capability inventory.
+CASE-F030,CASE,Multiple transition types,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"A-017,A-019,A-022",Reference-case capability inventory.
+CASE-F031,CASE,Interactive states within one screen,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Quiz/Mini-game,Reference-case capability inventory.
+CASE-F032,CASE,Sequence of states,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Quiz/Mini-game,Reference-case capability inventory.
+CASE-F033,CASE,Game/minigame,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Quiz/Mini-game,Reference-case capability inventory.
+CASE-F034,CASE,Multiple game states,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Quiz/Mini-game,Reference-case capability inventory.
+CASE-F035,CASE,User selection,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Quiz/Mini-game,Reference-case capability inventory.
+CASE-F036,CASE,UI response to choice,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-WIDGET-001..005; Widget Contract: Quiz/Mini-game,Reference-case capability inventory.
+CASE-F037,CASE,Fullscreen background image,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-016..019; A-003,Reference-case capability inventory.
+CASE-F038,CASE,Masking/cropping image,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-016..019; A-003,Reference-case capability inventory.
+CASE-F039,CASE,Multiple images simultaneously,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-016..019; A-003,Reference-case capability inventory.
+CASE-F040,CASE,Decorative graphics,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-016..019; A-003,Reference-case capability inventory.
+CASE-F041,CASE,Arbitrary positioning,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-016..019; A-003,Reference-case capability inventory.
+CASE-F042,CASE,Layering,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-016..019; A-003,Reference-case capability inventory.
+CASE-F043,CASE,Landscape format,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..015,Reference-case capability inventory.
+CASE-F044,CASE,Portrait format,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..015,Reference-case capability inventory.
+CASE-F045,CASE,1920×1080,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..015,Reference-case capability inventory.
+CASE-F046,CASE,Tall portrait including 2160×3840,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,ENG-CONSTR-013..015,Reference-case capability inventory.
+CASE-F047,CASE,One Constructor can build visually very different ISS applications,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"A-031,A-032; Project visual system",Reference-case capability inventory.
+CASE-F048,CASE,Same functional pattern supports different visual skins,VERIFIED_APPROVED_CASE_INVENTORY,Covered/Buildable,"A-031,A-032; Project visual system",Reference-case capability inventory.

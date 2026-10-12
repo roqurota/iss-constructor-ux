@@ -1,0 +1,21 @@
+{
+  "total_source_ids": 354,
+  "missing_ids": 0,
+  "engineering_semantic_traceability_complete": true,
+  "historical_verbatim_atomization_recovered": false,
+  "v1": {
+    "ids": 178,
+    "verified": 178
+  },
+  "tz": {
+    "ids": 128,
+    "semantically_verified_from_primary_source": 128,
+    "verbatim_historical_labels_recovered": false
+  },
+  "case": {
+    "ids": 48,
+    "verified": 48
+  },
+  "po_decision_required": false,
+  "meaning": "All 354 source capabilities are represented and semantically mapped. The old exact wording of the intermediate TZ atomization file was not found, so reconstructed TZ labels are explicitly not presented as verbatim historical text."
+}

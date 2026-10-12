@@ -1,0 +1,1790 @@
+[
+  {
+    "id": "ENG-ACT-001",
+    "level": "MUST",
+    "text": "Represent project-visible behavior as ordered Behavior Flows containing Actions and Control Steps.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-002",
+    "level": "MUST",
+    "text": "Initial Control Steps include Delay and If/Condition.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-003",
+    "level": "MUST",
+    "text": "Action dispatch use an extensible registry/handler model rather than hard-coded UI branching.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-004",
+    "level": "MUST",
+    "text": "Action definitions contain action type, optional logical target and typed/validated parameters.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-005",
+    "level": "MUST",
+    "text": "Navigation actions include Navigate Page, Next, Previous, Go Back and Go Home.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-006",
+    "level": "MUST",
+    "text": "Popup actions include Open, Close and Close All.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-007",
+    "level": "MUST",
+    "text": "Variable actions include Set, Add, Subtract, Toggle and Reset.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-008",
+    "level": "MUST",
+    "text": "Element/state actions include Show, Hide, Set State and Reset State.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-009",
+    "level": "MUST",
+    "text": "Animation actions include Play, Stop and Restart.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-010",
+    "level": "MUST",
+    "text": "Timeline actions include Start, Pause, Resume, Stop and Restart.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-011",
+    "level": "MUST",
+    "text": "Runtime actions include Reset Screen, Go Initial, Reset Idle Timer, Start Screensaver and Stop Screensaver.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-012",
+    "level": "MUST",
+    "text": "Network actions include Send TCP and Send UDP.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-013",
+    "level": "MUST",
+    "text": "Interaction actions include Lock and Unlock with explicit scope where applicable.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-014",
+    "level": "MUST",
+    "text": "One Trigger may start a Behavior Flow containing multiple Actions.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-015",
+    "level": "MUST",
+    "text": "Trigger families include pointer/touch, keyboard, mouse, network, timeline, media event, variable changed, lifecycle, idle and widget triggers where supported.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-016",
+    "level": "MUST",
+    "text": "External/network events use the same Action Engine as local UI events.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-017",
+    "level": "MUST",
+    "text": "Action handlers fail safely for unavailable/invalid targets and return diagnosable outcomes.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ACT-018",
+    "level": "MUST NOT",
+    "text": "Introduce a second parallel command system for Widgets, network or Player controls.",
+    "file": "docs/requirements/actions-triggers.md"
+  },
+  {
+    "id": "ENG-ASSET-001",
+    "level": "MUST",
+    "text": "Asset Library be virtual and independent from physical source folder layout.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-ASSET-002",
+    "level": "MUST",
+    "text": "AssetRecord retain stable assetId, kind, sourcePath, metadata and optional virtual folder.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-ASSET-003",
+    "level": "MUST",
+    "text": "Virtual folder rename/move MUST NOT move original source files.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-ASSET-004",
+    "level": "MUST",
+    "text": "Missing source file preserve AssetRecord and references for relink.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-ASSET-005",
+    "level": "MUST",
+    "text": "Recognize at least project-supported image, video, audio, font, SVG and animation asset kinds.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-ASSET-006",
+    "level": "MUST",
+    "text": "Asset import allocate stable IDs and gather usable metadata without making source paths runtime identity.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-FONT-001",
+    "level": "MUST",
+    "text": "Project Fonts be explicit project resources.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-FONT-002",
+    "level": "MUST",
+    "text": "Build package required Project Fonts and Runtime load them from Build.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-FONT-003",
+    "level": "SHOULD",
+    "text": "System-installed fonts remain usable for compatibility, but portable Project Fonts are preferred.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-SVG-001",
+    "level": "MUST",
+    "text": "Import ordinary SVG, including typical Figma-exported SVG, without requiring semantic naming conventions.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-SVG-002",
+    "level": "MUST",
+    "text": "Parse supported groups/primitives/text/images/geometry/transforms/fill/stroke/opacity/clip-mask information.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-SVG-003",
+    "level": "MUST",
+    "text": "Map SVG groups to Containers where appropriate.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-SVG-004",
+    "level": "MUST",
+    "text": "Register/materialize external SVG-linked assets through Asset Library.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-SVG-005",
+    "level": "MUST",
+    "text": "Unsupported SVG constructs fail visibly or preserve fidelity as practical; MUST NOT silently disappear without diagnostic.",
+    "file": "docs/requirements/assets-fonts-svg.md"
+  },
+  {
+    "id": "ENG-BUILD-010",
+    "level": "MUST",
+    "text": "Capture an immutable ProjectDocument snapshot at Build start.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-011",
+    "level": "MUST",
+    "text": "Run full structural, referential, semantic and resource validation against that snapshot before compilation.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-012",
+    "level": "MUST",
+    "text": "Abort Build on any Error-severity Problem and leave the previous published Build untouched.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-013",
+    "level": "MUST",
+    "text": "Discover runtime dependencies transitively from Screens, Pages, Elements, Widgets, Components, Playlists, fonts, system visuals and other compiled runtime entities.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-014",
+    "level": "MUST",
+    "text": "Include only assets reachable from the runtime dependency graph; unused registered assets MUST NOT be required for Build success.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-015",
+    "level": "MUST",
+    "text": "A missing source asset reachable from the runtime dependency graph is a Build Error.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-016",
+    "level": "MUST NOT",
+    "text": "Treat a missing unused registered asset as a Build-blocking error.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-017",
+    "level": "MUST",
+    "text": "Compile authoring ProjectDocument into a separate RuntimeProject representation.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-018",
+    "level": "MUST NOT",
+    "text": "Copy authoring-only metadata such as Designer Canvas frame positions into RuntimeProject unless explicitly required at runtime.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-019",
+    "level": "MUST",
+    "text": "Replace authoring asset source paths with Build-relative packaged asset paths.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-020",
+    "level": "MUST",
+    "text": "Preserve stable assetId as runtime identity.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-021",
+    "level": "MUST",
+    "text": "Materialize project fonts required by runtime into Build; Player MUST NOT depend on fonts being installed in Windows.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-022",
+    "level": "MUST",
+    "text": "Compile Component instances from their pinned revisions and applied overrides; historical unused revisions need not ship to Player.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-023",
+    "level": "MUST",
+    "text": "Ask each Widget Contract for declared asset dependencies.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-024",
+    "level": "MUST",
+    "text": "Produce `project.json`.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-025",
+    "level": "MUST",
+    "text": "Produce `manifest.json` containing buildId, projectId, runtimeFormatVersion, createdAt and packaged asset entries with assetId/path/kind/size/hash.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-026",
+    "level": "MUST",
+    "text": "Verify packaged output before publication.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-027",
+    "level": "MUST",
+    "text": "Publish atomically so a failed/incomplete Build never replaces a valid prior Build.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-028",
+    "level": "MUST NOT",
+    "text": "Include Screen→Display mapping or Multi-PC topology in project.json.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-029",
+    "level": "MUST NOT",
+    "text": "Require automatic media transcoding in initial V2.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-030",
+    "level": "MUST",
+    "text": "Build progress/errors be observable to Constructor UI.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-031",
+    "level": "MUST",
+    "text": "Player validate critical RuntimeProject/runtime dependencies when loading a Build and refuse invalid critical definitions safely.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-032",
+    "level": "MUST",
+    "text": "Runtime missing/corrupt packaged content after deployment degrade locally where possible rather than corrupting runtime state.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-BUILD-033",
+    "level": "MUST",
+    "text": "Collect Project and Build remain distinct operations: Collect copies all registered assets for portable authoring; Build packages only runtime dependencies.",
+    "file": "docs/requirements/build.md"
+  },
+  {
+    "id": "ENG-COMP-010",
+    "level": "MUST",
+    "text": "Component Definition store revision history with one current revision.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-011",
+    "level": "MUST",
+    "text": "Component Instance reference componentId and pinned revisionId.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-012",
+    "level": "MUST",
+    "text": "Saving edited Component Definition create a new revision.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-013",
+    "level": "MUST",
+    "text": "Existing instances remain on prior revision until explicit Review & Apply.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-014",
+    "level": "MUST",
+    "text": "Review identify affected instances and conflicts.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-015",
+    "level": "MUST",
+    "text": "Instance overrides remain authoritative by default on conflict.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-016",
+    "level": "MUST",
+    "text": "Detach materialize instance as independent local Elements and remove future component-update linkage.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-COMP-017",
+    "level": "MUST",
+    "text": "Nested Components be supported unless dependency cycle validation rejects a cycle.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-010",
+    "level": "MUST",
+    "text": "Widget be a functional module with internal state/behavior and a declared customization contract.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-011",
+    "level": "MUST",
+    "text": "Widget need not expose all internals as ordinary Elements.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-012",
+    "level": "MUST",
+    "text": "Initial architecture support Gallery, Image Viewer, Quiz, Form and Mini-game widget families.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-013",
+    "level": "MUST",
+    "text": "Gallery contract support content/order, viewport, previous/next, pagination, loop and transition configuration.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-014",
+    "level": "MUST",
+    "text": "Image Viewer contract support image, viewport, zoom range, pan and reset.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-015",
+    "level": "MUST",
+    "text": "Quiz contract support questions/answers and visual states including Normal/Selected/Correct/Incorrect/results.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-016",
+    "level": "MUST",
+    "text": "Mini-game may use Canvas/WebGL internally while remaining compliant with Widget lifecycle/actions/triggers/build dependencies.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-WIDGET-017",
+    "level": "MUST NOT",
+    "text": "Initial V2 expose a public third-party Widget SDK requirement.",
+    "file": "docs/requirements/components-widgets.md"
+  },
+  {
+    "id": "ENG-CONSTR-010",
+    "level": "MUST",
+    "text": "Constructor edit ProjectDocument only through controlled Project Operations rather than arbitrary UI mutation.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-011",
+    "level": "MUST",
+    "text": "Keep Editor UI state separate from ProjectDocument.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-012",
+    "level": "MUST",
+    "text": "Support undoable reversible Project Operations for ordinary editing.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-013",
+    "level": "MUST",
+    "text": "Support multiple Screens, each with fixed pixel width/height and independent Page set.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-014",
+    "level": "MUST",
+    "text": "Provide infinite Designer Canvas workspace for arranging Page/Popup/Screensaver/system frames without affecting runtime coordinates.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-015",
+    "level": "MUST",
+    "text": "Page dimensions equal owning Screen resolution.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-016",
+    "level": "MUST",
+    "text": "Provide Canvas pan, zoom, fit, lock, grid rows/columns and snap-to-grid.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-017",
+    "level": "MUST",
+    "text": "Support create/select/move/8-direction resize/delete/copy/paste/duplicate of applicable Elements.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-018",
+    "level": "MUST",
+    "text": "Expose X/Y/W/H and relevant visual properties for Elements.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-019",
+    "level": "MUST",
+    "text": "Support ordinary Text, Image, Button, Video, Container and Widget/Component instance elements required by the model.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-020",
+    "level": "MUST",
+    "text": "Support virtual Asset Library folders without moving original source files.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-021",
+    "level": "MUST",
+    "text": "Drag/drop/import assets while assigning stable asset IDs.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-022",
+    "level": "MUST",
+    "text": "Missing source assets preserve registry IDs/references and allow relink.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-023",
+    "level": "MUST",
+    "text": "Collect Project copy all registered assets without moving originals and produce a portable editable project.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-024",
+    "level": "MUST",
+    "text": "Full Preview run same Runtime Engine semantics as Player.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-025",
+    "level": "MUST",
+    "text": "Preview support Physical Displays mode and All Screens Simulator mode.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-026",
+    "level": "MUST",
+    "text": "Preview snapshot project state; editing after preview start MUST NOT silently hot-mutate the active runtime session.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-027",
+    "level": "MUST",
+    "text": "Problems panel expose validation Problems and support navigation to affected authoring entity where feasible.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-028",
+    "level": "MUST",
+    "text": "Content Admin be a Constructor mode governed by explicit exposure allow-list.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-029",
+    "level": "MUST NOT",
+    "text": "Initial Content Admin arbitrarily create/delete project structure unless later explicitly added.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-030",
+    "level": "MUST",
+    "text": "Content Admin edits modify the working project and require new Build/deployment to affect Player.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-031",
+    "level": "MUST",
+    "text": "SVG import parse ordinary exported SVG structure and materialize required external assets into project assets.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-032",
+    "level": "MUST",
+    "text": "Project fonts be manageable as project resources and packaged by Build.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-033",
+    "level": "MUST",
+    "text": "Component editing create a new revision rather than silently mutating all existing instances.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-CONSTR-034",
+    "level": "MUST",
+    "text": "Provide controlled Review & Apply Updates flow for component instances and preserve overrides by default.",
+    "file": "docs/requirements/constructor.md"
+  },
+  {
+    "id": "ENG-PROJ-001",
+    "level": "MUST",
+    "text": "Treat `ProjectDocument` as the sole editable project source of truth.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-PROJ-002",
+    "level": "MUST NOT",
+    "text": "Persist Editor UI state or Runtime state into `ProjectDocument` unless a future explicit requirement adds such persistence.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-PROJ-003",
+    "level": "MUST",
+    "text": "Use stable opaque IDs for independently referenceable entities; display names are not identity.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-PROJ-004",
+    "level": "MUST",
+    "text": "Save `.iss` atomically using temporary output, validation and replacement.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-PROJ-005",
+    "level": "MUST",
+    "text": "Perform explicit sequential forward migrations; older apps MUST refuse unsupported newer formats safely.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-001",
+    "level": "MUST",
+    "text": "Route project-visible events through Trigger → Behavior Flow → Action Engine.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-002",
+    "level": "MUST",
+    "text": "Process accepted events in observed arrival order without a global busy lock.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-003",
+    "level": "MUST",
+    "text": "A Delay pauses only its owning Behavior Flow.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-004",
+    "level": "MUST",
+    "text": "Page Leave cancels Page-owned flows/delays/timelines/media/animations, closes Page popups and destroys Page-local state.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-005",
+    "level": "MUST NOT",
+    "text": "Page Leave reset Screen or Shared Variables.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-006",
+    "level": "MUST",
+    "text": "Ignore stale asynchronous completion from invalidated Page/media/runtime generations.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-RT-007",
+    "level": "MUST",
+    "text": "Reset Screen creates a clean initial Screen state and invalidates pending work owned by the previous Screen session.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-MEDIA-001",
+    "level": "MUST",
+    "text": "Provide exactly one system fullscreen Screen Media Player per Screen.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-MEDIA-002",
+    "level": "MUST",
+    "text": "Keep Page media Elements separate from the system Screen Media Player.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-MEDIA-003",
+    "level": "MUST",
+    "text": "Page background video/media support autoplay, loop, volume, mute/unmute and audible playback.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-MEDIA-004",
+    "level": "MUST NOT",
+    "text": "Implement a separate V2 Screenless runtime mode.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-MEDIA-005",
+    "level": "MUST",
+    "text": "A new Play Content request supersedes stale pending preparation for older requested content on the same Screen Media Player.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-MEDIA-006",
+    "level": "MUST",
+    "text": "Media Timeline follow actual media playback time and pause with media playback.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-DISP-001",
+    "level": "MUST",
+    "text": "Runtime behavior targets logical Screen IDs, never physical Display IDs.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-DISP-002",
+    "level": "MUST",
+    "text": "Store Screen→Display mapping in PlayerLocalConfig, not ProjectDocument or Build.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-DISP-003",
+    "level": "MUST",
+    "text": "Never silently remap a missing physical display.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-DISP-004",
+    "level": "MUST",
+    "text": "Failure/unavailability of one Screen output MUST NOT intentionally stop healthy Screens.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-BUILD-001",
+    "level": "MUST",
+    "text": "Player consumes Build only and MUST NOT open `.iss`.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-BUILD-002",
+    "level": "MUST",
+    "text": "Build operate from a ProjectDocument snapshot.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-BUILD-003",
+    "level": "MUST",
+    "text": "Full validation occur before publish; required used missing assets are Build Errors.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-BUILD-004",
+    "level": "MUST",
+    "text": "Package only runtime-required asset dependencies.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-BUILD-005",
+    "level": "MUST",
+    "text": "Publish Build atomically and preserve the previous valid Build on failure.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-BUILD-006",
+    "level": "MUST",
+    "text": "Generate runtime `project.json` and `manifest.json`; authoring source paths MUST NOT be runtime dependencies.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-WIDGET-001",
+    "level": "MUST",
+    "text": "Every Widget declare stable `widgetType` and `widgetSchemaVersion`.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-WIDGET-002",
+    "level": "MUST",
+    "text": "Widget project-visible behavior integrate through registered Actions/Triggers.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-WIDGET-003",
+    "level": "MUST",
+    "text": "Widget asset dependencies be discoverable by Build.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-WIDGET-004",
+    "level": "MUST",
+    "text": "Dispose/cancel Widget-owned work on Page Leave.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-WIDGET-005",
+    "level": "MUST NOT",
+    "text": "Permit project-authored arbitrary executable JavaScript as Widget props.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-COMP-001",
+    "level": "MUST",
+    "text": "Component instances remain pinned to a revision until controlled update is applied.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-COMP-002",
+    "level": "MUST",
+    "text": "Instance overrides win by default during component update review.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-COMP-003",
+    "level": "MUST NOT",
+    "text": "Silently propagate component changes over existing instance overrides.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-NET-001",
+    "level": "MUST",
+    "text": "Treat incoming TCP/UDP as Trigger sources and outgoing messages as Actions.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-NET-002",
+    "level": "MUST",
+    "text": "Unknown/unmatched network input fail safely and be diagnosable.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-SYNC-001",
+    "level": "MUST",
+    "text": "Treat Multi-PC topology as deployment-local installation configuration.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-SYNC-002",
+    "level": "MUST NOT",
+    "text": "Add a per-Action `synchronized` authoring checkbox as the synchronization model.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-SYNC-003",
+    "level": "MUST",
+    "text": "Synchronized distributed operations support preparation/readiness and a common future execution time when preparation/timing is required.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-SYNC-004",
+    "level": "MUST",
+    "text": "A disconnected Client after installation startup MUST NOT freeze unrelated healthy nodes indefinitely.",
+    "file": "docs/requirements/core-contracts.md"
+  },
+  {
+    "id": "ENG-IDLE-001",
+    "level": "MUST",
+    "text": "Each Screen have at most one Screensaver system entity.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-IDLE-002",
+    "level": "MUST",
+    "text": "Screensaver support simple background/image/video/text/logo/animation visual composition.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-IDLE-003",
+    "level": "MUST",
+    "text": "Page define its idle timeout/behavior.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-IDLE-004",
+    "level": "MUST",
+    "text": "Relevant processed user/runtime activity reset idle timer according to runtime policy; raw unmatched network noise MUST NOT count as meaningful activity.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-IDLE-005",
+    "level": "MUST",
+    "text": "Screensaver capture user input while visible.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-IDLE-006",
+    "level": "MUST",
+    "text": "User input may hide Screensaver when configured; external Trigger MUST NOT automatically hide it unless behavior says so.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-IDLE-007",
+    "level": "MUST",
+    "text": "Entering Screensaver close active Page Popups and Screen Media Player as defined by canonical lifecycle while keeping underlying Page runtime alive.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-ERR-001",
+    "level": "MUST",
+    "text": "Provide configurable Screen Error/Fallback Visual plus built-in neutral fallback.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-ERR-002",
+    "level": "MUST",
+    "text": "Error Visual support simple media/text and optional short error code.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-ERR-003",
+    "level": "MUST",
+    "text": "Missing single content asset degrade locally where practical instead of forcing whole Screen Error state.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-ERR-004",
+    "level": "MUST",
+    "text": "Critical inability to render a Screen enter Screen Error state and show Error Visual.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-ERR-005",
+    "level": "MUST",
+    "text": "Visitor-facing error UI MUST NOT expose raw stack traces.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-DIAG-001",
+    "level": "MUST",
+    "text": "Developer diagnostics expose current Screen/Page/runtime status.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-DIAG-002",
+    "level": "MUST",
+    "text": "Diagnostics expose loaded RuntimeProject/project data in developer UI.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-DIAG-003",
+    "level": "MUST",
+    "text": "Diagnostics expose network command log and manual send.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-DIAG-004",
+    "level": "MUST",
+    "text": "Developer Preview expose Event/Action trace, variables, timelines and media/playlist state.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-DIAG-005",
+    "level": "MUST",
+    "text": "Diagnostic failure MUST NOT alter project layout semantics.",
+    "file": "docs/requirements/idle-error-diagnostics.md"
+  },
+  {
+    "id": "ENG-MEDIA-010",
+    "level": "MUST",
+    "text": "`Play Content` accept either a single Asset or first-class Playlist as content source.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-011",
+    "level": "MUST",
+    "text": "Playlist preserve explicit item order independent of filesystem order.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-012",
+    "level": "MUST",
+    "text": "Quick Import Folder may create a Playlist, but later filesystem changes MUST NOT silently redefine Playlist membership/order.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-013",
+    "level": "MUST",
+    "text": "Image playlist items support duration; Video items use natural duration unless range overrides apply.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-014",
+    "level": "MUST",
+    "text": "Video playlist items support volume, mute and playback range settings.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-015",
+    "level": "MUST",
+    "text": "Non-loop Playlist finish exit content after final item.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-016",
+    "level": "MUST",
+    "text": "Next/Previous at a non-loop boundary exit content according to approved V1-equivalent behavior.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-017",
+    "level": "MUST",
+    "text": "Looping Playlist cycle deterministically.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-018",
+    "level": "MUST",
+    "text": "Emit Started, Item Started, Item Finished and Finished media/playlist events where applicable.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-019",
+    "level": "MUST",
+    "text": "Screen Media Player support Play, Pause, Stop, Restart, Seek, Next/Previous Item, Volume and Mute/Unmute actions.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-020",
+    "level": "MUST",
+    "text": "Replacing currently playing content leave only the newest accepted content active.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-021",
+    "level": "MUST",
+    "text": "Old preparation completion MUST NOT steal playback after a newer content request.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-022",
+    "level": "MUST",
+    "text": "Page navigation while Screen Media Player is active close/stop it using Media Exit semantics before/with Page transition as defined by runtime composition.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-023",
+    "level": "MUST",
+    "text": "Natural content finish/Stop/Exit reveal the underlying current Page unless configured behavior navigates elsewhere.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-024",
+    "level": "MUST",
+    "text": "Page background media be Page-owned and stop/dispose on Page Leave.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-025",
+    "level": "MUST",
+    "text": "Page background video/media support audible playback, autoplay, loop, volume and mute/unmute.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-026",
+    "level": "MUST",
+    "text": "Media Timeline clock derive from actual source media time.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-027",
+    "level": "MUST",
+    "text": "Media Timeline pause with media and follow Seek.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-028",
+    "level": "MUST",
+    "text": "Media Timeline events crossed during configured loop playback be able to fire on each playback pass.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-029",
+    "level": "MUST",
+    "text": "Decoder/timeupdate jitter MUST NOT create unintended duplicate bursts of the same timeline event.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-030",
+    "level": "MUST",
+    "text": "Initial V2 use simple on-demand/targeted preparation rather than a global predictive cache.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-031",
+    "level": "MUST",
+    "text": "Screen Media Player prepare requested media before playback.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-032",
+    "level": "SHOULD",
+    "text": "Playlist prepare current + next item where cheap/useful.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-MEDIA-033",
+    "level": "MUST",
+    "text": "Preparation be invalidatable on replacement/reset/lifecycle termination.",
+    "file": "docs/requirements/media.md"
+  },
+  {
+    "id": "ENG-NET-010",
+    "level": "MUST",
+    "text": "Central Player Network Service own configured TCP/UDP listeners.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-011",
+    "level": "MUST",
+    "text": "Support multiple listening ports.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-012",
+    "level": "MUST",
+    "text": "Network Trigger support Any/specific source IP and optional source-port filtering.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-013",
+    "level": "MUST",
+    "text": "Initial payload matching support Exact, Starts With and Contains.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-014",
+    "level": "MUST NOT",
+    "text": "Require Regex matching in initial V2.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-015",
+    "level": "MUST",
+    "text": "TCP listener support configurable framing with newline default and advanced fixed/raw modes.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-016",
+    "level": "MUST",
+    "text": "UDP treat datagram payload as message without TCP framing.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-017",
+    "level": "MUST",
+    "text": "One Network Trigger may execute multiple Actions including cross-Screen actions.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-018",
+    "level": "MUST",
+    "text": "Support named outgoing Network Endpoints with transport/host/port/framing data.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-019",
+    "level": "MUST",
+    "text": "Preview use real TCP/UDP behavior, not a fake simulation layer.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-020",
+    "level": "MUST",
+    "text": "Network Monitor record timestamp, direction, source/destination, payload, matched trigger, resulting actions and outcome/unmatched status.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-NET-021",
+    "level": "MUST",
+    "text": "Developer tools allow manual outgoing network command for diagnostics.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-010",
+    "level": "MUST",
+    "text": "Multi-PC installation support Master/Server and Client node roles.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-011",
+    "level": "MUST",
+    "text": "Node identity use a stable nodeId; IP may be used as address/security restriction but MUST NOT be the sole conceptual identity.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-012",
+    "level": "MUST",
+    "text": "Client maintain/re-establish long-lived connection to Master and re-synchronize clock after reconnect.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-013",
+    "level": "MUST",
+    "text": "Master track expected Clients and readiness.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-014",
+    "level": "MUST",
+    "text": "Initial installation startup support strict waiting for Required Clients before ready state.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-015",
+    "level": "SHOULD",
+    "text": "Architecture support Required/Optional node classification; default expected nodes may be Required.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-016",
+    "level": "MUST",
+    "text": "Distributed operations needing prepared resources use PREPARE → READY barrier → future timestamped EXECUTE/START.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-017",
+    "level": "MUST",
+    "text": "Clients convert Master execution time using established clock offset.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-018",
+    "level": "MUST",
+    "text": "Playlist/sequence advancement in synchronized playback repeat synchronization for the next item rather than only synchronizing initial playback.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-019",
+    "level": "MUST",
+    "text": "After installation is running, loss of one Client MUST NOT globally stop healthy nodes.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-020",
+    "level": "MUST",
+    "text": "Actions targeted to unavailable node fail safely and appear in diagnostics.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-021",
+    "level": "MUST",
+    "text": "Reconnected Client join future synchronized operations after clock sync; missed historical actions MUST NOT be automatically replayed.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-SYNC-022",
+    "level": "MUST NOT",
+    "text": "Transparently synchronize ordinary Shared Player Variables across PCs in initial V2.",
+    "file": "docs/requirements/network-sync.md"
+  },
+  {
+    "id": "ENG-PERSIST-001",
+    "level": "MUST",
+    "text": "`.iss` contain authoring model and stable projectId plus independent formatVersion.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-002",
+    "level": "MUST",
+    "text": "formatVersion change only for persistent schema compatibility changes, not every app release.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-003",
+    "level": "MUST",
+    "text": "Migration run forward sequentially in memory before normal editing.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-004",
+    "level": "MUST",
+    "text": "Original project file remain untouched until explicit Save.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-005",
+    "level": "MUST",
+    "text": "First Save after migration create migration backup before replacing original.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-006",
+    "level": "MUST",
+    "text": "Unsupported newer format fail safely without destructive rewrite.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-007",
+    "level": "MUST",
+    "text": "Unsaved work recovery use a separate debounced recovery snapshot keyed by projectId.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-008",
+    "level": "MUST",
+    "text": "Recovery snapshot MUST NOT replace normal `.iss` save semantics.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-009",
+    "level": "MUST",
+    "text": "After abnormal restart, Constructor offer Recover/Discard when valid recovery exists.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-010",
+    "level": "MUST",
+    "text": "Normal close with dirty project support Save / Don't Save / Cancel; Don't Save removes stale recovery for that session.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PERSIST-011",
+    "level": "MUST",
+    "text": "Copy/Duplicate/Import discover owned graph, allocate new IDs, rewrite internal references, preserve external dependencies and commit atomically as one Project Operation.",
+    "file": "docs/requirements/persistence-migration-recovery.md"
+  },
+  {
+    "id": "ENG-PLAYER-010",
+    "level": "MUST",
+    "text": "On first launch with no configured project, show technician setup allowing Build selection.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-011",
+    "level": "MUST",
+    "text": "Validate selected Build before entering normal runtime.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-012",
+    "level": "MUST",
+    "text": "On normal configured startup, avoid visitor-facing technical setup UI; show neutral/black startup surface until runtime is ready.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-013",
+    "level": "MUST",
+    "text": "Persist selected Build path/project identity, display mapping, startup/dev settings and Multi-PC node configuration in PlayerLocalConfig outside installed application files.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-014",
+    "level": "MUST",
+    "text": "Preserve PlayerLocalConfig through normal manual application reinstall/update.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-015",
+    "level": "MUST",
+    "text": "Detect physical Windows displays and expose resolution/position/scale/primary metadata needed for mapping.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-016",
+    "level": "MUST",
+    "text": "Allow max one logical Screen per physical Display and max one Display per logical Screen.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-017",
+    "level": "MUST",
+    "text": "Display Mapping changes be staged until Save.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-018",
+    "level": "MUST",
+    "text": "Applying saved mapping dynamically create/retain/close/reassign runtime windows where possible without mandatory whole-Player restart.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-019",
+    "level": "MUST",
+    "text": "Missing assigned physical Display leave other Screens running and MUST NOT silently remap.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-020",
+    "level": "MUST",
+    "text": "Provide Identify Displays and Rescan Displays technician functions.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-021",
+    "level": "MUST",
+    "text": "Open global Developer Mode via Ctrl+Shift+D using physical key/code semantics independent of keyboard layout.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-022",
+    "level": "MUST",
+    "text": "Developer tools include Load/choose Build, Clear Project, Display Mapping, Network diagnostics and runtime diagnostics.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-023",
+    "level": "MUST",
+    "text": "Clear Project stop runtime and return to no-project/setup state.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-024",
+    "level": "MUST",
+    "text": "Dev overlay appear as top system layer without changing project viewport/layout geometry.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-025",
+    "level": "MUST",
+    "text": "Production Player not use ESC as a default visitor exit mechanism.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-026",
+    "level": "MUST",
+    "text": "One renderer crash be recoverable by Main recreating only that Screen window/session where possible.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-027",
+    "level": "MUST",
+    "text": "Whole-Player crash be recoverable by external watchdog restart into configured Build with clean runtime session.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PLAYER-028",
+    "level": "MUST",
+    "text": "Produce human-readable rotating diagnostic logs with Screen/project/runtime context.",
+    "file": "docs/requirements/player.md"
+  },
+  {
+    "id": "ENG-PREV-001",
+    "level": "MUST",
+    "text": "Constructor Preview use the same Runtime Engine source/packages as Player.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-002",
+    "level": "MUST",
+    "text": "Preview compile a project snapshot through Runtime Compiler semantics before starting RuntimeSession.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-003",
+    "level": "MUST",
+    "text": "Preview execute real Actions, media, timelines, Widgets and TCP/UDP semantics.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-004",
+    "level": "MUST",
+    "text": "All Screens Simulator create real logical ScreenRuntimeSessions rendered scaled for inspection; scaling MUST NOT change logical project resolution.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-005",
+    "level": "MUST",
+    "text": "Physical Displays preview use explicit local mapping and MUST NOT write deployment mapping into ProjectDocument.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-006",
+    "level": "MUST",
+    "text": "Developer overlay be outside project visual coordinate system.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-007",
+    "level": "MUST",
+    "text": "ESC may exit Developer Preview but production Player MUST NOT inherit this as default kiosk exit.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-PREV-008",
+    "level": "MUST",
+    "text": "Preview restart from a new snapshot rather than live-mutating active Runtime definition.",
+    "file": "docs/requirements/preview-runtime-parity.md"
+  },
+  {
+    "id": "ENG-RT-010",
+    "level": "MUST",
+    "text": "Create one independent ScreenRuntimeSession per active logical Screen.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-011",
+    "level": "MUST",
+    "text": "Maintain exactly one active PageRuntime per normal ScreenRuntimeSession.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-012",
+    "level": "MUST",
+    "text": "Page Enter create fresh Page-local runtime state.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-013",
+    "level": "MUST",
+    "text": "Page Enter fire lifecycle behavior and start eligible auto Page Timeline at 00:00.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-014",
+    "level": "MUST",
+    "text": "Page Leave close Page-owned Popups.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-015",
+    "level": "MUST",
+    "text": "Page Leave cancel Page-owned Behavior Flows and Delays.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-016",
+    "level": "MUST",
+    "text": "Page Leave stop Page Timeline and Page-owned media/animations.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-017",
+    "level": "MUST",
+    "text": "Page Leave destroy Page-local state.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-018",
+    "level": "MUST",
+    "text": "Re-entering a Page create a fresh Page runtime.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-019",
+    "level": "MUST",
+    "text": "`oncePerScreenSession` timeline flags survive Page re-entry and reset on Reset Screen/clean restart.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-020",
+    "level": "MUST",
+    "text": "Navigation during an in-progress transition avoid duplicate Page runtimes/orphan transitions; the later accepted destination determines final state.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-021",
+    "level": "MUST",
+    "text": "Screen Variables survive Page navigation and reset on Reset Screen.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-022",
+    "level": "MUST",
+    "text": "Shared Player Variables survive Page navigation and ordinary single-Screen reset unless explicitly targeted.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-023",
+    "level": "MUST",
+    "text": "Variable Changed emit only according to defined value-change semantics, not merely because a Set action was attempted.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-024",
+    "level": "MUST",
+    "text": "Interaction Lock block configured user-input scope while allowing system/external events by default.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-025",
+    "level": "MUST",
+    "text": "Timelines/media continue while Interaction Lock is active unless explicitly stopped.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-026",
+    "level": "MUST",
+    "text": "Reset Screen close media/popups, cancel owned work, reset Screen variables/once flags/idle/nav history/locks and enter initial Page.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-027",
+    "level": "MUST",
+    "text": "Screensaver show/hide MUST NOT fire Page Leave/Enter.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-028",
+    "level": "MUST",
+    "text": "Underlying Page Timeline continue beneath Screensaver and Screen Media Player unless explicitly paused/stopped.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-029",
+    "level": "MUST",
+    "text": "Popup runtime cannot outlive its owning Page.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-030",
+    "level": "MUST",
+    "text": "Opening the same Popup repeatedly MUST NOT create uncontrolled duplicates unless the Popup contract explicitly allows multiple instances.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-031",
+    "level": "MUST",
+    "text": "A stale async callback carry/validate owner generation identity before mutating runtime.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-032",
+    "level": "MUST",
+    "text": "A recoverable Widget/content error be contained to the smallest practical runtime boundary.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-033",
+    "level": "MUST",
+    "text": "Renderer recreation start the affected Screen from a clean initial Screen state; exact crash-time state restoration is not required.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-RT-034",
+    "level": "MUST",
+    "text": "Other healthy ScreenRuntimeSessions continue when one Screen renderer fails.",
+    "file": "docs/requirements/runtime.md"
+  },
+  {
+    "id": "ENG-SCREEN-001",
+    "level": "MUST",
+    "text": "Project support multiple logical Screens.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-SCREEN-002",
+    "level": "MUST",
+    "text": "Screen have stable ID, name, fixed width/height, Pages and one initialPageId.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-SCREEN-003",
+    "level": "MUST",
+    "text": "Screen width/height define orientation/aspect; no separate mandatory orientation flag is required.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-SCREEN-004",
+    "level": "MUST",
+    "text": "Every normal V2 Screen use the Page model; no Screenless special runtime path.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-PAGE-001",
+    "level": "MUST",
+    "text": "Page dimensions equal owning Screen resolution.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-PAGE-002",
+    "level": "MUST",
+    "text": "Page support navigation and scroll flow modes.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-PAGE-003",
+    "level": "MUST",
+    "text": "Long content be expressible with Scrollable Containers and/or sequential scroll composition without changing Screen resolution.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-PAGE-004",
+    "level": "MUST",
+    "text": "Page own ordinary Elements, Popups, optional Page Timeline, idle settings and Page lifecycle behaviors.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-PAGE-005",
+    "level": "MUST",
+    "text": "Screen persistent layer survive Page changes with per-Page visibility control.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-001",
+    "level": "MUST",
+    "text": "Independently editable Elements have stable IDs and transforms including x/y/width/height/rotation/scale.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-002",
+    "level": "MUST",
+    "text": "Elements support visibility, opacity, z-order and locking where applicable.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-003",
+    "level": "MUST",
+    "text": "Container is a real parent owning child element IDs; ownership graph MUST be acyclic.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-004",
+    "level": "MUST",
+    "text": "Base primitives include Text, Image, Button, Video and Container.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-005",
+    "level": "MUST",
+    "text": "Button support text/visual styling/icon and Behavior bindings.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-006",
+    "level": "MUST",
+    "text": "Text support font family, size, color and horizontal/vertical alignment.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-007",
+    "level": "MUST",
+    "text": "Image/video support fit/crop behavior appropriate to media type.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-008",
+    "level": "MUST",
+    "text": "Element references to project assets use assetId, not source filesystem path.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-ELEM-009",
+    "level": "MUST",
+    "text": "Layering and arbitrary positioning reproduce reference-case compositions.",
+    "file": "docs/requirements/screens-pages-elements.md"
+  },
+  {
+    "id": "ENG-VAL-010",
+    "level": "MUST",
+    "text": "Use one Project Validation Engine across Open, Save, Build, Collect and manual validation contexts.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-011",
+    "level": "MUST",
+    "text": "Represent findings as structured Problems with severity Error/Warning/Info and target/context data.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-012",
+    "level": "MUST",
+    "text": "Separate structural/schema, referential/semantic and resource/build validation concerns.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-013",
+    "level": "MUST",
+    "text": "Error block Build; Warning and Info do not.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-014",
+    "level": "MUST",
+    "text": "Validation report problems without silently modifying project data.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-015",
+    "level": "MUST",
+    "text": "Run fast/debounced validation after relevant edits and full validation for Open/manual/Collect/Build as appropriate.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-016",
+    "level": "MUST",
+    "text": "Detect broken entity references and invalid ownership/cycles where the data model forbids them.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-017",
+    "level": "MUST",
+    "text": "Detect missing runtime-required assets during full Build validation.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-018",
+    "level": "MUST",
+    "text": "Validate Widget props/dependencies through Widget Contract.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-019",
+    "level": "MUST",
+    "text": "Validate Component dependency cycles and pinned revision references.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-020",
+    "level": "MUST",
+    "text": "Validate Screen initialPageId and other required runtime entry points.",
+    "file": "docs/requirements/validation.md"
+  },
+  {
+    "id": "ENG-VAL-021",
+    "level": "MUST",
+    "text": "Quick Fix, if added, remain explicit user action and MUST NOT be a prerequisite for validation correctness.",
+    "file": "docs/requirements/validation.md"
+  }
+]

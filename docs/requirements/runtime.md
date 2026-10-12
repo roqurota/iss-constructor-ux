@@ -1,0 +1,27 @@
+# Runtime Engineering Requirements
+
+- **ENG-RT-010 MUST**: Create one independent ScreenRuntimeSession per active logical Screen.
+- **ENG-RT-011 MUST**: Maintain exactly one active PageRuntime per normal ScreenRuntimeSession.
+- **ENG-RT-012 MUST**: Page Enter create fresh Page-local runtime state.
+- **ENG-RT-013 MUST**: Page Enter fire lifecycle behavior and start eligible auto Page Timeline at 00:00.
+- **ENG-RT-014 MUST**: Page Leave close Page-owned Popups.
+- **ENG-RT-015 MUST**: Page Leave cancel Page-owned Behavior Flows and Delays.
+- **ENG-RT-016 MUST**: Page Leave stop Page Timeline and Page-owned media/animations.
+- **ENG-RT-017 MUST**: Page Leave destroy Page-local state.
+- **ENG-RT-018 MUST**: Re-entering a Page create a fresh Page runtime.
+- **ENG-RT-019 MUST**: `oncePerScreenSession` timeline flags survive Page re-entry and reset on Reset Screen/clean restart.
+- **ENG-RT-020 MUST**: Navigation during an in-progress transition avoid duplicate Page runtimes/orphan transitions; the later accepted destination determines final state.
+- **ENG-RT-021 MUST**: Screen Variables survive Page navigation and reset on Reset Screen.
+- **ENG-RT-022 MUST**: Shared Player Variables survive Page navigation and ordinary single-Screen reset unless explicitly targeted.
+- **ENG-RT-023 MUST**: Variable Changed emit only according to defined value-change semantics, not merely because a Set action was attempted.
+- **ENG-RT-024 MUST**: Interaction Lock block configured user-input scope while allowing system/external events by default.
+- **ENG-RT-025 MUST**: Timelines/media continue while Interaction Lock is active unless explicitly stopped.
+- **ENG-RT-026 MUST**: Reset Screen close media/popups, cancel owned work, reset Screen variables/once flags/idle/nav history/locks and enter initial Page.
+- **ENG-RT-027 MUST**: Screensaver show/hide MUST NOT fire Page Leave/Enter.
+- **ENG-RT-028 MUST**: Underlying Page Timeline continue beneath Screensaver and Screen Media Player unless explicitly paused/stopped.
+- **ENG-RT-029 MUST**: Popup runtime cannot outlive its owning Page.
+- **ENG-RT-030 MUST**: Opening the same Popup repeatedly MUST NOT create uncontrolled duplicates unless the Popup contract explicitly allows multiple instances.
+- **ENG-RT-031 MUST**: A stale async callback carry/validate owner generation identity before mutating runtime.
+- **ENG-RT-032 MUST**: A recoverable Widget/content error be contained to the smallest practical runtime boundary.
+- **ENG-RT-033 MUST**: Renderer recreation start the affected Screen from a clean initial Screen state; exact crash-time state restoration is not required.
+- **ENG-RT-034 MUST**: Other healthy ScreenRuntimeSessions continue when one Screen renderer fails.

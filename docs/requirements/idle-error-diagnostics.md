@@ -1,0 +1,18 @@
+# Idle, Error Visual and Diagnostics
+- **ENG-IDLE-001 MUST**: Each Screen have at most one Screensaver system entity.
+- **ENG-IDLE-002 MUST**: Screensaver support simple background/image/video/text/logo/animation visual composition.
+- **ENG-IDLE-003 MUST**: Page define its idle timeout/behavior.
+- **ENG-IDLE-004 MUST**: Relevant processed user/runtime activity reset idle timer according to runtime policy; raw unmatched network noise MUST NOT count as meaningful activity.
+- **ENG-IDLE-005 MUST**: Screensaver capture user input while visible.
+- **ENG-IDLE-006 MUST**: User input may hide Screensaver when configured; external Trigger MUST NOT automatically hide it unless behavior says so.
+- **ENG-IDLE-007 MUST**: Entering Screensaver close active Page Popups and Screen Media Player as defined by canonical lifecycle while keeping underlying Page runtime alive.
+- **ENG-ERR-001 MUST**: Provide configurable Screen Error/Fallback Visual plus built-in neutral fallback.
+- **ENG-ERR-002 MUST**: Error Visual support simple media/text and optional short error code.
+- **ENG-ERR-003 MUST**: Missing single content asset degrade locally where practical instead of forcing whole Screen Error state.
+- **ENG-ERR-004 MUST**: Critical inability to render a Screen enter Screen Error state and show Error Visual.
+- **ENG-ERR-005 MUST**: Visitor-facing error UI MUST NOT expose raw stack traces.
+- **ENG-DIAG-001 MUST**: Developer diagnostics expose current Screen/Page/runtime status.
+- **ENG-DIAG-002 MUST**: Diagnostics expose loaded RuntimeProject/project data in developer UI.
+- **ENG-DIAG-003 MUST**: Diagnostics expose network command log and manual send.
+- **ENG-DIAG-004 MUST**: Developer Preview expose Event/Action trace, variables, timelines and media/playlist state.
+- **ENG-DIAG-005 MUST**: Diagnostic failure MUST NOT alter project layout semantics.

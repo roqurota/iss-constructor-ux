@@ -1,0 +1,8 @@
+{
+  "atomic_eng_requirements": 298,
+  "mandatory_contracts": 295,
+  "planned_test_contracts": 295,
+  "source_traceability": "354/354 semantic verified",
+  "initial_implementation_tasks": 10,
+  "product_owner_decisions_required": 0
+}

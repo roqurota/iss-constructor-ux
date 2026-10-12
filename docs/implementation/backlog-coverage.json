@@ -1,0 +1,10 @@
+{
+  "tasks": 60,
+  "waves": 10,
+  "atomic_requirements": 298,
+  "mandatory_requirements": 295,
+  "mandatory_directly_assigned_to_backlog_tasks": 295,
+  "mandatory_not_yet_directly_assigned": 0,
+  "unassigned_ids": [],
+  "backlog_contract_coverage_complete": true
+}

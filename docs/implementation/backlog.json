@@ -1,0 +1,602 @@
+[
+  {
+    "task_id": "IMP-001",
+    "title": "Monorepo and shared TypeScript foundations",
+    "wave": 1,
+    "dependencies": "",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "repo/apps/packages scaffolding",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-002",
+    "title": "Canonical Project Model types and IDs",
+    "wave": 1,
+    "dependencies": "IMP-001",
+    "requirements": 23,
+    "linked_tests": 23,
+    "scope": "packages/project-model",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-003",
+    "title": "Project persistence, atomic save and migration",
+    "wave": 1,
+    "dependencies": "IMP-002",
+    "requirements": 11,
+    "linked_tests": 11,
+    "scope": "packages/project-model persistence",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-004",
+    "title": "Project Operations, copy/duplicate and history",
+    "wave": 1,
+    "dependencies": "IMP-002",
+    "requirements": 4,
+    "linked_tests": 4,
+    "scope": "packages/project-model operations + Constructor state bridge",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-005",
+    "title": "Validation Engine core",
+    "wave": 1,
+    "dependencies": "IMP-002",
+    "requirements": 12,
+    "linked_tests": 12,
+    "scope": "packages/project-model/validation",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-006",
+    "title": "Virtual Asset Library core",
+    "wave": 1,
+    "dependencies": "IMP-002",
+    "requirements": 9,
+    "linked_tests": 8,
+    "scope": "project-model asset registry + asset service",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-007",
+    "title": "SVG structured import",
+    "wave": 2,
+    "dependencies": "IMP-006;IMP-004",
+    "requirements": 6,
+    "linked_tests": 6,
+    "scope": "Constructor import service",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-008",
+    "title": "Constructor application shell and project lifecycle",
+    "wave": 2,
+    "dependencies": "IMP-003;IMP-004;IMP-005",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "apps/constructor",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-009",
+    "title": "Designer Canvas viewport and grid",
+    "wave": 2,
+    "dependencies": "IMP-008",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "apps/constructor designer",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-010",
+    "title": "Element editing tools",
+    "wave": 2,
+    "dependencies": "IMP-009;IMP-004",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "apps/constructor designer",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-011",
+    "title": "Asset Library Constructor UI and relink",
+    "wave": 2,
+    "dependencies": "IMP-006;IMP-008",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "apps/constructor asset UI",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-012",
+    "title": "Collect Project",
+    "wave": 2,
+    "dependencies": "IMP-003;IMP-006",
+    "requirements": 2,
+    "linked_tests": 2,
+    "scope": "Constructor project services",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-013",
+    "title": "Action registry and Behavior Flow engine",
+    "wave": 2,
+    "dependencies": "IMP-002",
+    "requirements": 12,
+    "linked_tests": 12,
+    "scope": "packages/actions + runtime-engine",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-014",
+    "title": "Core Action handlers",
+    "wave": 3,
+    "dependencies": "IMP-013",
+    "requirements": 9,
+    "linked_tests": 9,
+    "scope": "packages/actions",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-015",
+    "title": "Screen/Page RuntimeSession lifecycle",
+    "wave": 3,
+    "dependencies": "IMP-013;IMP-002",
+    "requirements": 17,
+    "linked_tests": 17,
+    "scope": "packages/runtime-engine",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-016",
+    "title": "Runtime variables and interaction locks",
+    "wave": 3,
+    "dependencies": "IMP-015;IMP-014",
+    "requirements": 5,
+    "linked_tests": 5,
+    "scope": "packages/runtime-engine",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-017",
+    "title": "Base DOM/CSS/SVG runtime renderer",
+    "wave": 3,
+    "dependencies": "IMP-015",
+    "requirements": 7,
+    "linked_tests": 7,
+    "scope": "packages/runtime-engine renderer",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-018",
+    "title": "Page navigation and visual transitions",
+    "wave": 3,
+    "dependencies": "IMP-015;IMP-017;IMP-014",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "runtime navigation/transition layer",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-019",
+    "title": "Popup runtime",
+    "wave": 3,
+    "dependencies": "IMP-015;IMP-017;IMP-014",
+    "requirements": 2,
+    "linked_tests": 2,
+    "scope": "runtime popup layer",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-020",
+    "title": "Page Timeline engine",
+    "wave": 3,
+    "dependencies": "IMP-015;IMP-013",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "runtime timeline",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-021",
+    "title": "Screen persistent layer and scroll flow",
+    "wave": 3,
+    "dependencies": "IMP-017;IMP-015",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "runtime + Constructor model integration",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-022",
+    "title": "Screen Media Player core",
+    "wave": 4,
+    "dependencies": "IMP-015;IMP-017;IMP-014;IMP-006",
+    "requirements": 11,
+    "linked_tests": 11,
+    "scope": "packages/media + runtime",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-023",
+    "title": "Playlist engine",
+    "wave": 4,
+    "dependencies": "IMP-022",
+    "requirements": 9,
+    "linked_tests": 8,
+    "scope": "packages/media",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-024",
+    "title": "Media Timeline and playback ranges",
+    "wave": 4,
+    "dependencies": "IMP-022;IMP-013",
+    "requirements": 5,
+    "linked_tests": 5,
+    "scope": "packages/media timeline",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-025",
+    "title": "Page background media with audio",
+    "wave": 4,
+    "dependencies": "IMP-017;IMP-022",
+    "requirements": 4,
+    "linked_tests": 4,
+    "scope": "runtime page renderer/media",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-026",
+    "title": "Playback controls and preserved input control",
+    "wave": 4,
+    "dependencies": "IMP-022;IMP-014",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "media controls/input",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-027",
+    "title": "Targeted media preparation and preload",
+    "wave": 4,
+    "dependencies": "IMP-022;IMP-023",
+    "requirements": 4,
+    "linked_tests": 3,
+    "scope": "packages/media",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-028",
+    "title": "Component definitions, revisions and instances",
+    "wave": 4,
+    "dependencies": "IMP-004;IMP-010",
+    "requirements": 13,
+    "linked_tests": 13,
+    "scope": "project-model + Constructor + runtime compile support",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-029",
+    "title": "Widget registry and common runtime contract",
+    "wave": 4,
+    "dependencies": "IMP-013;IMP-017;IMP-006",
+    "requirements": 9,
+    "linked_tests": 9,
+    "scope": "packages/widgets",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-030",
+    "title": "Gallery Widget",
+    "wave": 5,
+    "dependencies": "IMP-029",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "packages/widgets/gallery",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-031",
+    "title": "Image Viewer Widget",
+    "wave": 5,
+    "dependencies": "IMP-029",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "packages/widgets/image-viewer",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-032",
+    "title": "Quiz Widget",
+    "wave": 5,
+    "dependencies": "IMP-029;IMP-016",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "packages/widgets/quiz",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-033",
+    "title": "Form Widget",
+    "wave": 5,
+    "dependencies": "IMP-029;IMP-016",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "packages/widgets/form",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-034",
+    "title": "Mini-game Widget framework",
+    "wave": 5,
+    "dependencies": "IMP-029",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "packages/widgets/minigame",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-035",
+    "title": "Screensaver and idle engine",
+    "wave": 5,
+    "dependencies": "IMP-015;IMP-022;IMP-019",
+    "requirements": 9,
+    "linked_tests": 9,
+    "scope": "runtime idle/system visual",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-036",
+    "title": "Error/Fallback Visual and local degradation",
+    "wave": 5,
+    "dependencies": "IMP-017;IMP-005",
+    "requirements": 6,
+    "linked_tests": 6,
+    "scope": "runtime error boundary",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-037",
+    "title": "Runtime Compiler",
+    "wave": 5,
+    "dependencies": "IMP-002;IMP-005;IMP-006;IMP-028;IMP-029",
+    "requirements": 19,
+    "linked_tests": 19,
+    "scope": "build/compiler",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-038",
+    "title": "Build materialization, manifest and atomic publish",
+    "wave": 5,
+    "dependencies": "IMP-037",
+    "requirements": 8,
+    "linked_tests": 8,
+    "scope": "build pipeline",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-039",
+    "title": "Constructor Preview runtime",
+    "wave": 6,
+    "dependencies": "IMP-037;IMP-017;IMP-022",
+    "requirements": 10,
+    "linked_tests": 10,
+    "scope": "apps/constructor preview",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-040",
+    "title": "Preview physical display mode",
+    "wave": 6,
+    "dependencies": "IMP-039",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "Constructor preview/display service",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-041",
+    "title": "TCP/UDP Network Service",
+    "wave": 6,
+    "dependencies": "IMP-013",
+    "requirements": 11,
+    "linked_tests": 11,
+    "scope": "packages/network + Player Main",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-042",
+    "title": "Network diagnostics and manual send",
+    "wave": 6,
+    "dependencies": "IMP-041",
+    "requirements": 4,
+    "linked_tests": 4,
+    "scope": "network/dev tools",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-043",
+    "title": "Player application shell and Build loading",
+    "wave": 6,
+    "dependencies": "IMP-038;IMP-017;IMP-022",
+    "requirements": 6,
+    "linked_tests": 6,
+    "scope": "apps/player",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-044",
+    "title": "Physical display discovery and mapping",
+    "wave": 6,
+    "dependencies": "IMP-043",
+    "requirements": 10,
+    "linked_tests": 10,
+    "scope": "Player Main + technician UI",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-045",
+    "title": "Same-PC multi-display RuntimeCoordinator",
+    "wave": 6,
+    "dependencies": "IMP-044;IMP-015",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "Player runtime coordinator",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-046",
+    "title": "Player Developer Mode and diagnostics",
+    "wave": 7,
+    "dependencies": "IMP-043;IMP-042;IMP-044",
+    "requirements": 9,
+    "linked_tests": 9,
+    "scope": "Player dev overlay",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-047",
+    "title": "Renderer fault recovery and watchdog integration",
+    "wave": 7,
+    "dependencies": "IMP-043;IMP-044",
+    "requirements": 5,
+    "linked_tests": 5,
+    "scope": "Player Main/runtime",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-048",
+    "title": "Player local config persistence and reinstall survival",
+    "wave": 7,
+    "dependencies": "IMP-043",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "Player local config",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-049",
+    "title": "Content Admin Mode",
+    "wave": 7,
+    "dependencies": "IMP-008;IMP-011;IMP-028",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "apps/constructor admin mode",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-050",
+    "title": "Project visual system and project fonts",
+    "wave": 7,
+    "dependencies": "IMP-006;IMP-010;IMP-017",
+    "requirements": 1,
+    "linked_tests": 1,
+    "scope": "Constructor + renderer + Build",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-051",
+    "title": "Multi-PC node connection, identity and clock sync",
+    "wave": 8,
+    "dependencies": "IMP-041;IMP-043",
+    "requirements": 8,
+    "linked_tests": 7,
+    "scope": "packages/network sync + Player Main",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-052",
+    "title": "Distributed PREPARE/READY/EXECUTE coordinator",
+    "wave": 8,
+    "dependencies": "IMP-051;IMP-045;IMP-022",
+    "requirements": 4,
+    "linked_tests": 4,
+    "scope": "runtime/network distributed coordinator",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-053",
+    "title": "Multi-PC disconnect/reconnect fault tolerance",
+    "wave": 8,
+    "dependencies": "IMP-052",
+    "requirements": 5,
+    "linked_tests": 5,
+    "scope": "distributed runtime",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-054",
+    "title": "Constructor Problems panel and validation UX",
+    "wave": 8,
+    "dependencies": "IMP-005;IMP-008",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "apps/constructor validation UI",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-055",
+    "title": "Runtime/Build validation integration hardening",
+    "wave": 8,
+    "dependencies": "IMP-038;IMP-029;IMP-028",
+    "requirements": 3,
+    "linked_tests": 3,
+    "scope": "validation/build integration",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-056",
+    "title": "Kiosk startup and Windows deployment behavior",
+    "wave": 9,
+    "dependencies": "IMP-043;IMP-047;IMP-048",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "apps/player + Windows integration",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-057",
+    "title": "V1 compatibility acceptance suite",
+    "wave": 9,
+    "dependencies": "IMP-026;IMP-044;IMP-046;IMP-055",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "tests/compatibility",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-058",
+    "title": "Reference CASE acceptance suite",
+    "wave": 9,
+    "dependencies": "IMP-030;IMP-031;IMP-032;IMP-034;IMP-039",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "tests/reference-cases",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-059",
+    "title": "Original TZ acceptance suite",
+    "wave": 9,
+    "dependencies": "IMP-049;IMP-050;IMP-056;IMP-055",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "tests/acceptance",
+    "status": "PLANNED"
+  },
+  {
+    "task_id": "IMP-060",
+    "title": "Soak, chaos and museum stability suite",
+    "wave": 10,
+    "dependencies": "IMP-047;IMP-053;IMP-057;IMP-058;IMP-059",
+    "requirements": 0,
+    "linked_tests": 0,
+    "scope": "tests/stability",
+    "status": "PLANNED"
+  }
+]

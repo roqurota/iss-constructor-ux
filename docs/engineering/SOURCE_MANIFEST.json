@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "product-specification",
+    "source_file": "ISS_Constructor_V2_Product_Specification.docx",
+    "sha256": "274462ecfa01c25ca9f83bdbbf46d25f262ac26b6bca593a07d1ce0724fd585b",
+    "snapshot": "docs/source/product-specification.md"
+  },
+  {
+    "slug": "system-architecture",
+    "source_file": "ISS_Constructor_V2_System_Architecture_Specification.docx",
+    "sha256": "25f832b0daea9c767db033c773cc761307d56fa377fb569e5e08d376f8315836",
+    "snapshot": "docs/source/system-architecture.md"
+  },
+  {
+    "slug": "project-data-model",
+    "source_file": "ISS_Constructor_V2_Project_Data_Model_and_JSON_Schema.docx",
+    "sha256": "bb2da7fd874e7e447716dc4094449ec0b119f85a471ec86db0295864d6bba6d9",
+    "snapshot": "docs/source/project-data-model.md"
+  },
+  {
+    "slug": "runtime-state-model",
+    "source_file": "ISS_Constructor_V2_Runtime_State_Model_REPACKED.docx",
+    "sha256": "e5fc536475f98389667693753133d068de38e521a22aa74c50b1ffb7f4b63bef",
+    "snapshot": "docs/source/runtime-state-model.md"
+  },
+  {
+    "slug": "widget-contract",
+    "source_file": "ISS_Constructor_V2_Widget_Contract_Specification.docx",
+    "sha256": "63ca16392db0f123ef65be42dd2d939fd913beabb8e9658c37f2776ff73af476",
+    "snapshot": "docs/source/widget-contract.md"
+  },
+  {
+    "slug": "original-tz",
+    "source_file": "ТЗ_ИСС_Конструктор.docx",
+    "sha256": "e2c3c4ebd3f22ab3134f9bf486b7755193fe3d8428002eb4494ab9520f1a159c",
+    "snapshot": "docs/source/original-tz.md"
+  }
+]
