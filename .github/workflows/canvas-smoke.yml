@@ -1,22 +1,73 @@
-name: Canvas browser smoke test
+name: Constructor V2 Quality Gate
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
-  browser:
+  quality-gate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install playwright
-      - run: python -m playwright install --with-deps chromium
-      - run: python -m http.server 8765 --bind 127.0.0.1 &
-      - run: python tests/test_canvas.py
-      - uses: actions/upload-artifact@v4
+      - name: Install browser dependencies
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Validate Python test syntax
+        run: python -m compileall -q tests
+      - name: Start prototype server
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/iss-server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8765/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/iss-server.log
+          exit 1
+      - name: Functional Playwright regression
+        id: functional
+        continue-on-error: true
+        run: python tests/test_canvas.py
+      - name: UX heuristics and screenshot capture
+        id: ux
+        if: always()
+        continue-on-error: true
+        run: python tests/test_ux_gate.py
+      - name: Publish Quality Gate summary
+        if: always()
+        run: |
+          {
+            echo "## Constructor V2 Quality Gate"
+            echo ""
+            echo "| Gate | Result |"
+            echo "|---|---|"
+            echo "| Functional Playwright | ${{ steps.functional.outcome }} |"
+            echo "| UX heuristics | ${{ steps.ux.outcome }} |"
+            echo ""
+            echo "Screenshots and ux-gate.json are in the downloadable artifact."
+            echo "Visual review is **not** automatically certified by screenshot capture."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload diagnostic evidence
+        uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: canvas-screenshot
+          name: constructor-v2-quality-gate
           path: test-artifacts/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Enforce Quality Gate
+        if: always()
+        env:
+          FUNCTIONAL: ${{ steps.functional.outcome }}
+          UX: ${{ steps.ux.outcome }}
+        run: |
+          if [ "$FUNCTIONAL" != "success" ] || [ "$UX" != "success" ]; then
+            echo "::error::Quality Gate failed. Inspect test logs and diagnostic artifact."
+            exit 1
+          fi
