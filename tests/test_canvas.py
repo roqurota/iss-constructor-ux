@@ -106,6 +106,16 @@ with sync_playwright() as p:
     assert page.locator('#applyBehavior').inner_text() == 'Save Action', "Canvas Edit Action did not open the selected action"
     page.locator('#cancelActionEdit').click()
     assert page.locator('#applyBehavior').inner_text() == '+ Add Action', "Cancel edit did not reset form"
+
+    # Select the second of two outgoing connections and verify it maps to Popup,
+    # then delete only that connection without changing Navigate.
+    page.locator('#connectionPaths .link-hit[data-link]').nth(1).dispatch_event('pointerdown', {'button': 0})
+    assert 'Info Popup' in page.locator('#details').inner_text(), "Second connection selected wrong action"
+    page.locator('#deleteLink').click()
+    assert page.locator('#connectionPaths .link-hit[data-link]').count() == 1, "Deleting one connection removed the wrong number"
+    home.locator('.mockbutton').click()
+    assert page.locator('.multi-action').count() == 1
+    assert 'Details' in page.locator('.multi-action').first.inner_text(), "Navigate action was lost"
     assert not errors, f"JavaScript errors after interactions: {errors}"
 
     Path("test-artifacts").mkdir(exist_ok=True)
