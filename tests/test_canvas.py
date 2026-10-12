@@ -45,6 +45,7 @@ with sync_playwright() as p:
         }""")
 
     result = inspect()
+    print(f"Initial arrow geometry: {result}", flush=True)
     assert result['withinButton'], f"Navigate arrow starts outside button: {result}"
     assert result['overlayAfterPage'], f"SVG overlay is behind Page: {result}"
     assert result['overlayStacking'], f"Arrow overlay stacking is behind Page: {result}"
@@ -57,6 +58,7 @@ with sync_playwright() as p:
     page.mouse.move(before['x'] + 100, before['y'] + 60, steps=8)
     page.mouse.up()
     moved = inspect()
+    print(f"Arrow geometry after dragging: {moved}", flush=True)
     assert moved['withinButton'] and moved['overlayStacking'], f"Arrow failed after dragging Home: {moved}"
     assert abs(moved['start']['x'] - result['start']['x']) > 15, f"Arrow did not move with Home: {moved}"
     assert not errors, f"JavaScript errors after interactions: {errors}"
