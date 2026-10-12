@@ -1,0 +1,17 @@
+# Components and Widgets
+- **ENG-COMP-010 MUST**: Component Definition store revision history with one current revision.
+- **ENG-COMP-011 MUST**: Component Instance reference componentId and pinned revisionId.
+- **ENG-COMP-012 MUST**: Saving edited Component Definition create a new revision.
+- **ENG-COMP-013 MUST**: Existing instances remain on prior revision until explicit Review & Apply.
+- **ENG-COMP-014 MUST**: Review identify affected instances and conflicts.
+- **ENG-COMP-015 MUST**: Instance overrides remain authoritative by default on conflict.
+- **ENG-COMP-016 MUST**: Detach materialize instance as independent local Elements and remove future component-update linkage.
+- **ENG-COMP-017 MUST**: Nested Components be supported unless dependency cycle validation rejects a cycle.
+- **ENG-WIDGET-010 MUST**: Widget be a functional module with internal state/behavior and a declared customization contract.
+- **ENG-WIDGET-011 MUST**: Widget need not expose all internals as ordinary Elements.
+- **ENG-WIDGET-012 MUST**: Initial architecture support Gallery, Image Viewer, Quiz, Form and Mini-game widget families.
+- **ENG-WIDGET-013 MUST**: Gallery contract support content/order, viewport, previous/next, pagination, loop and transition configuration.
+- **ENG-WIDGET-014 MUST**: Image Viewer contract support image, viewport, zoom range, pan and reset.
+- **ENG-WIDGET-015 MUST**: Quiz contract support questions/answers and visual states including Normal/Selected/Correct/Incorrect/results.
+- **ENG-WIDGET-016 MUST**: Mini-game may use Canvas/WebGL internally while remaining compliant with Widget lifecycle/actions/triggers/build dependencies.
+- **ENG-WIDGET-017 MUST NOT**: Initial V2 expose a public third-party Widget SDK requirement.

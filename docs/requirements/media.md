@@ -1,0 +1,26 @@
+# Media Engineering Requirements
+
+- **ENG-MEDIA-010 MUST**: `Play Content` accept either a single Asset or first-class Playlist as content source.
+- **ENG-MEDIA-011 MUST**: Playlist preserve explicit item order independent of filesystem order.
+- **ENG-MEDIA-012 MUST**: Quick Import Folder may create a Playlist, but later filesystem changes MUST NOT silently redefine Playlist membership/order.
+- **ENG-MEDIA-013 MUST**: Image playlist items support duration; Video items use natural duration unless range overrides apply.
+- **ENG-MEDIA-014 MUST**: Video playlist items support volume, mute and playback range settings.
+- **ENG-MEDIA-015 MUST**: Non-loop Playlist finish exit content after final item.
+- **ENG-MEDIA-016 MUST**: Next/Previous at a non-loop boundary exit content according to approved V1-equivalent behavior.
+- **ENG-MEDIA-017 MUST**: Looping Playlist cycle deterministically.
+- **ENG-MEDIA-018 MUST**: Emit Started, Item Started, Item Finished and Finished media/playlist events where applicable.
+- **ENG-MEDIA-019 MUST**: Screen Media Player support Play, Pause, Stop, Restart, Seek, Next/Previous Item, Volume and Mute/Unmute actions.
+- **ENG-MEDIA-020 MUST**: Replacing currently playing content leave only the newest accepted content active.
+- **ENG-MEDIA-021 MUST**: Old preparation completion MUST NOT steal playback after a newer content request.
+- **ENG-MEDIA-022 MUST**: Page navigation while Screen Media Player is active close/stop it using Media Exit semantics before/with Page transition as defined by runtime composition.
+- **ENG-MEDIA-023 MUST**: Natural content finish/Stop/Exit reveal the underlying current Page unless configured behavior navigates elsewhere.
+- **ENG-MEDIA-024 MUST**: Page background media be Page-owned and stop/dispose on Page Leave.
+- **ENG-MEDIA-025 MUST**: Page background video/media support audible playback, autoplay, loop, volume and mute/unmute.
+- **ENG-MEDIA-026 MUST**: Media Timeline clock derive from actual source media time.
+- **ENG-MEDIA-027 MUST**: Media Timeline pause with media and follow Seek.
+- **ENG-MEDIA-028 MUST**: Media Timeline events crossed during configured loop playback be able to fire on each playback pass.
+- **ENG-MEDIA-029 MUST**: Decoder/timeupdate jitter MUST NOT create unintended duplicate bursts of the same timeline event.
+- **ENG-MEDIA-030 MUST**: Initial V2 use simple on-demand/targeted preparation rather than a global predictive cache.
+- **ENG-MEDIA-031 MUST**: Screen Media Player prepare requested media before playback.
+- **ENG-MEDIA-032 SHOULD**: Playlist prepare current + next item where cheap/useful.
+- **ENG-MEDIA-033 MUST**: Preparation be invalidatable on replacement/reset/lifecycle termination.

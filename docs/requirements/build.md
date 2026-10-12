@@ -1,0 +1,26 @@
+# Build Engineering Requirements
+
+- **ENG-BUILD-010 MUST**: Capture an immutable ProjectDocument snapshot at Build start.
+- **ENG-BUILD-011 MUST**: Run full structural, referential, semantic and resource validation against that snapshot before compilation.
+- **ENG-BUILD-012 MUST**: Abort Build on any Error-severity Problem and leave the previous published Build untouched.
+- **ENG-BUILD-013 MUST**: Discover runtime dependencies transitively from Screens, Pages, Elements, Widgets, Components, Playlists, fonts, system visuals and other compiled runtime entities.
+- **ENG-BUILD-014 MUST**: Include only assets reachable from the runtime dependency graph; unused registered assets MUST NOT be required for Build success.
+- **ENG-BUILD-015 MUST**: A missing source asset reachable from the runtime dependency graph is a Build Error.
+- **ENG-BUILD-016 MUST NOT**: Treat a missing unused registered asset as a Build-blocking error.
+- **ENG-BUILD-017 MUST**: Compile authoring ProjectDocument into a separate RuntimeProject representation.
+- **ENG-BUILD-018 MUST NOT**: Copy authoring-only metadata such as Designer Canvas frame positions into RuntimeProject unless explicitly required at runtime.
+- **ENG-BUILD-019 MUST**: Replace authoring asset source paths with Build-relative packaged asset paths.
+- **ENG-BUILD-020 MUST**: Preserve stable assetId as runtime identity.
+- **ENG-BUILD-021 MUST**: Materialize project fonts required by runtime into Build; Player MUST NOT depend on fonts being installed in Windows.
+- **ENG-BUILD-022 MUST**: Compile Component instances from their pinned revisions and applied overrides; historical unused revisions need not ship to Player.
+- **ENG-BUILD-023 MUST**: Ask each Widget Contract for declared asset dependencies.
+- **ENG-BUILD-024 MUST**: Produce `project.json`.
+- **ENG-BUILD-025 MUST**: Produce `manifest.json` containing buildId, projectId, runtimeFormatVersion, createdAt and packaged asset entries with assetId/path/kind/size/hash.
+- **ENG-BUILD-026 MUST**: Verify packaged output before publication.
+- **ENG-BUILD-027 MUST**: Publish atomically so a failed/incomplete Build never replaces a valid prior Build.
+- **ENG-BUILD-028 MUST NOT**: Include Screen→Display mapping or Multi-PC topology in project.json.
+- **ENG-BUILD-029 MUST NOT**: Require automatic media transcoding in initial V2.
+- **ENG-BUILD-030 MUST**: Build progress/errors be observable to Constructor UI.
+- **ENG-BUILD-031 MUST**: Player validate critical RuntimeProject/runtime dependencies when loading a Build and refuse invalid critical definitions safely.
+- **ENG-BUILD-032 MUST**: Runtime missing/corrupt packaged content after deployment degrade locally where possible rather than corrupting runtime state.
+- **ENG-BUILD-033 MUST**: Collect Project and Build remain distinct operations: Collect copies all registered assets for portable authoring; Build packages only runtime dependencies.

@@ -1,0 +1,19 @@
+# Screens, Pages and Elements
+- **ENG-SCREEN-001 MUST**: Project support multiple logical Screens.
+- **ENG-SCREEN-002 MUST**: Screen have stable ID, name, fixed width/height, Pages and one initialPageId.
+- **ENG-SCREEN-003 MUST**: Screen width/height define orientation/aspect; no separate mandatory orientation flag is required.
+- **ENG-SCREEN-004 MUST**: Every normal V2 Screen use the Page model; no Screenless special runtime path.
+- **ENG-PAGE-001 MUST**: Page dimensions equal owning Screen resolution.
+- **ENG-PAGE-002 MUST**: Page support navigation and scroll flow modes.
+- **ENG-PAGE-003 MUST**: Long content be expressible with Scrollable Containers and/or sequential scroll composition without changing Screen resolution.
+- **ENG-PAGE-004 MUST**: Page own ordinary Elements, Popups, optional Page Timeline, idle settings and Page lifecycle behaviors.
+- **ENG-PAGE-005 MUST**: Screen persistent layer survive Page changes with per-Page visibility control.
+- **ENG-ELEM-001 MUST**: Independently editable Elements have stable IDs and transforms including x/y/width/height/rotation/scale.
+- **ENG-ELEM-002 MUST**: Elements support visibility, opacity, z-order and locking where applicable.
+- **ENG-ELEM-003 MUST**: Container is a real parent owning child element IDs; ownership graph MUST be acyclic.
+- **ENG-ELEM-004 MUST**: Base primitives include Text, Image, Button, Video and Container.
+- **ENG-ELEM-005 MUST**: Button support text/visual styling/icon and Behavior bindings.
+- **ENG-ELEM-006 MUST**: Text support font family, size, color and horizontal/vertical alignment.
+- **ENG-ELEM-007 MUST**: Image/video support fit/crop behavior appropriate to media type.
+- **ENG-ELEM-008 MUST**: Element references to project assets use assetId, not source filesystem path.
+- **ENG-ELEM-009 MUST**: Layering and arbitrary positioning reproduce reference-case compositions.

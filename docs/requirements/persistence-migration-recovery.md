@@ -1,0 +1,12 @@
+# Persistence, Migration and Recovery
+- **ENG-PERSIST-001 MUST**: `.iss` contain authoring model and stable projectId plus independent formatVersion.
+- **ENG-PERSIST-002 MUST**: formatVersion change only for persistent schema compatibility changes, not every app release.
+- **ENG-PERSIST-003 MUST**: Migration run forward sequentially in memory before normal editing.
+- **ENG-PERSIST-004 MUST**: Original project file remain untouched until explicit Save.
+- **ENG-PERSIST-005 MUST**: First Save after migration create migration backup before replacing original.
+- **ENG-PERSIST-006 MUST**: Unsupported newer format fail safely without destructive rewrite.
+- **ENG-PERSIST-007 MUST**: Unsaved work recovery use a separate debounced recovery snapshot keyed by projectId.
+- **ENG-PERSIST-008 MUST**: Recovery snapshot MUST NOT replace normal `.iss` save semantics.
+- **ENG-PERSIST-009 MUST**: After abnormal restart, Constructor offer Recover/Discard when valid recovery exists.
+- **ENG-PERSIST-010 MUST**: Normal close with dirty project support Save / Don't Save / Cancel; Don't Save removes stale recovery for that session.
+- **ENG-PERSIST-011 MUST**: Copy/Duplicate/Import discover owned graph, allocate new IDs, rewrite internal references, preserve external dependencies and commit atomically as one Project Operation.

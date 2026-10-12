@@ -1,0 +1,19 @@
+# Actions, Triggers and Behavior Flow
+- **ENG-ACT-001 MUST**: Represent project-visible behavior as ordered Behavior Flows containing Actions and Control Steps.
+- **ENG-ACT-002 MUST**: Initial Control Steps include Delay and If/Condition.
+- **ENG-ACT-003 MUST**: Action dispatch use an extensible registry/handler model rather than hard-coded UI branching.
+- **ENG-ACT-004 MUST**: Action definitions contain action type, optional logical target and typed/validated parameters.
+- **ENG-ACT-005 MUST**: Navigation actions include Navigate Page, Next, Previous, Go Back and Go Home.
+- **ENG-ACT-006 MUST**: Popup actions include Open, Close and Close All.
+- **ENG-ACT-007 MUST**: Variable actions include Set, Add, Subtract, Toggle and Reset.
+- **ENG-ACT-008 MUST**: Element/state actions include Show, Hide, Set State and Reset State.
+- **ENG-ACT-009 MUST**: Animation actions include Play, Stop and Restart.
+- **ENG-ACT-010 MUST**: Timeline actions include Start, Pause, Resume, Stop and Restart.
+- **ENG-ACT-011 MUST**: Runtime actions include Reset Screen, Go Initial, Reset Idle Timer, Start Screensaver and Stop Screensaver.
+- **ENG-ACT-012 MUST**: Network actions include Send TCP and Send UDP.
+- **ENG-ACT-013 MUST**: Interaction actions include Lock and Unlock with explicit scope where applicable.
+- **ENG-ACT-014 MUST**: One Trigger may start a Behavior Flow containing multiple Actions.
+- **ENG-ACT-015 MUST**: Trigger families include pointer/touch, keyboard, mouse, network, timeline, media event, variable changed, lifecycle, idle and widget triggers where supported.
+- **ENG-ACT-016 MUST**: External/network events use the same Action Engine as local UI events.
+- **ENG-ACT-017 MUST**: Action handlers fail safely for unavailable/invalid targets and return diagnosable outcomes.
+- **ENG-ACT-018 MUST NOT**: Introduce a second parallel command system for Widgets, network or Player controls.

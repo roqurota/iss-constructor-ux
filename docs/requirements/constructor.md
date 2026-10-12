@@ -1,0 +1,27 @@
+# Constructor Engineering Requirements
+
+- **ENG-CONSTR-010 MUST**: Constructor edit ProjectDocument only through controlled Project Operations rather than arbitrary UI mutation.
+- **ENG-CONSTR-011 MUST**: Keep Editor UI state separate from ProjectDocument.
+- **ENG-CONSTR-012 MUST**: Support undoable reversible Project Operations for ordinary editing.
+- **ENG-CONSTR-013 MUST**: Support multiple Screens, each with fixed pixel width/height and independent Page set.
+- **ENG-CONSTR-014 MUST**: Provide infinite Designer Canvas workspace for arranging Page/Popup/Screensaver/system frames without affecting runtime coordinates.
+- **ENG-CONSTR-015 MUST**: Page dimensions equal owning Screen resolution.
+- **ENG-CONSTR-016 MUST**: Provide Canvas pan, zoom, fit, lock, grid rows/columns and snap-to-grid.
+- **ENG-CONSTR-017 MUST**: Support create/select/move/8-direction resize/delete/copy/paste/duplicate of applicable Elements.
+- **ENG-CONSTR-018 MUST**: Expose X/Y/W/H and relevant visual properties for Elements.
+- **ENG-CONSTR-019 MUST**: Support ordinary Text, Image, Button, Video, Container and Widget/Component instance elements required by the model.
+- **ENG-CONSTR-020 MUST**: Support virtual Asset Library folders without moving original source files.
+- **ENG-CONSTR-021 MUST**: Drag/drop/import assets while assigning stable asset IDs.
+- **ENG-CONSTR-022 MUST**: Missing source assets preserve registry IDs/references and allow relink.
+- **ENG-CONSTR-023 MUST**: Collect Project copy all registered assets without moving originals and produce a portable editable project.
+- **ENG-CONSTR-024 MUST**: Full Preview run same Runtime Engine semantics as Player.
+- **ENG-CONSTR-025 MUST**: Preview support Physical Displays mode and All Screens Simulator mode.
+- **ENG-CONSTR-026 MUST**: Preview snapshot project state; editing after preview start MUST NOT silently hot-mutate the active runtime session.
+- **ENG-CONSTR-027 MUST**: Problems panel expose validation Problems and support navigation to affected authoring entity where feasible.
+- **ENG-CONSTR-028 MUST**: Content Admin be a Constructor mode governed by explicit exposure allow-list.
+- **ENG-CONSTR-029 MUST NOT**: Initial Content Admin arbitrarily create/delete project structure unless later explicitly added.
+- **ENG-CONSTR-030 MUST**: Content Admin edits modify the working project and require new Build/deployment to affect Player.
+- **ENG-CONSTR-031 MUST**: SVG import parse ordinary exported SVG structure and materialize required external assets into project assets.
+- **ENG-CONSTR-032 MUST**: Project fonts be manageable as project resources and packaged by Build.
+- **ENG-CONSTR-033 MUST**: Component editing create a new revision rather than silently mutating all existing instances.
+- **ENG-CONSTR-034 MUST**: Provide controlled Review & Apply Updates flow for component instances and preserve overrides by default.

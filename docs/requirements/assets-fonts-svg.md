@@ -1,0 +1,15 @@
+# Assets, Fonts and SVG
+- **ENG-ASSET-001 MUST**: Asset Library be virtual and independent from physical source folder layout.
+- **ENG-ASSET-002 MUST**: AssetRecord retain stable assetId, kind, sourcePath, metadata and optional virtual folder.
+- **ENG-ASSET-003 MUST**: Virtual folder rename/move MUST NOT move original source files.
+- **ENG-ASSET-004 MUST**: Missing source file preserve AssetRecord and references for relink.
+- **ENG-ASSET-005 MUST**: Recognize at least project-supported image, video, audio, font, SVG and animation asset kinds.
+- **ENG-ASSET-006 MUST**: Asset import allocate stable IDs and gather usable metadata without making source paths runtime identity.
+- **ENG-FONT-001 MUST**: Project Fonts be explicit project resources.
+- **ENG-FONT-002 MUST**: Build package required Project Fonts and Runtime load them from Build.
+- **ENG-FONT-003 SHOULD**: System-installed fonts remain usable for compatibility, but portable Project Fonts are preferred.
+- **ENG-SVG-001 MUST**: Import ordinary SVG, including typical Figma-exported SVG, without requiring semantic naming conventions.
+- **ENG-SVG-002 MUST**: Parse supported groups/primitives/text/images/geometry/transforms/fill/stroke/opacity/clip-mask information.
+- **ENG-SVG-003 MUST**: Map SVG groups to Containers where appropriate.
+- **ENG-SVG-004 MUST**: Register/materialize external SVG-linked assets through Asset Library.
+- **ENG-SVG-005 MUST**: Unsupported SVG constructs fail visibly or preserve fidelity as practical; MUST NOT silently disappear without diagnostic.

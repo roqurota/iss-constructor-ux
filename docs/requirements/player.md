@@ -1,0 +1,21 @@
+# Player Engineering Requirements
+
+- **ENG-PLAYER-010 MUST**: On first launch with no configured project, show technician setup allowing Build selection.
+- **ENG-PLAYER-011 MUST**: Validate selected Build before entering normal runtime.
+- **ENG-PLAYER-012 MUST**: On normal configured startup, avoid visitor-facing technical setup UI; show neutral/black startup surface until runtime is ready.
+- **ENG-PLAYER-013 MUST**: Persist selected Build path/project identity, display mapping, startup/dev settings and Multi-PC node configuration in PlayerLocalConfig outside installed application files.
+- **ENG-PLAYER-014 MUST**: Preserve PlayerLocalConfig through normal manual application reinstall/update.
+- **ENG-PLAYER-015 MUST**: Detect physical Windows displays and expose resolution/position/scale/primary metadata needed for mapping.
+- **ENG-PLAYER-016 MUST**: Allow max one logical Screen per physical Display and max one Display per logical Screen.
+- **ENG-PLAYER-017 MUST**: Display Mapping changes be staged until Save.
+- **ENG-PLAYER-018 MUST**: Applying saved mapping dynamically create/retain/close/reassign runtime windows where possible without mandatory whole-Player restart.
+- **ENG-PLAYER-019 MUST**: Missing assigned physical Display leave other Screens running and MUST NOT silently remap.
+- **ENG-PLAYER-020 MUST**: Provide Identify Displays and Rescan Displays technician functions.
+- **ENG-PLAYER-021 MUST**: Open global Developer Mode via Ctrl+Shift+D using physical key/code semantics independent of keyboard layout.
+- **ENG-PLAYER-022 MUST**: Developer tools include Load/choose Build, Clear Project, Display Mapping, Network diagnostics and runtime diagnostics.
+- **ENG-PLAYER-023 MUST**: Clear Project stop runtime and return to no-project/setup state.
+- **ENG-PLAYER-024 MUST**: Dev overlay appear as top system layer without changing project viewport/layout geometry.
+- **ENG-PLAYER-025 MUST**: Production Player not use ESC as a default visitor exit mechanism.
+- **ENG-PLAYER-026 MUST**: One renderer crash be recoverable by Main recreating only that Screen window/session where possible.
+- **ENG-PLAYER-027 MUST**: Whole-Player crash be recoverable by external watchdog restart into configured Build with clean runtime session.
+- **ENG-PLAYER-028 MUST**: Produce human-readable rotating diagnostic logs with Screen/project/runtime context.

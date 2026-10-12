@@ -1,0 +1,27 @@
+# Network and Multi-PC Synchronization Requirements
+
+- **ENG-NET-010 MUST**: Central Player Network Service own configured TCP/UDP listeners.
+- **ENG-NET-011 MUST**: Support multiple listening ports.
+- **ENG-NET-012 MUST**: Network Trigger support Any/specific source IP and optional source-port filtering.
+- **ENG-NET-013 MUST**: Initial payload matching support Exact, Starts With and Contains.
+- **ENG-NET-014 MUST NOT**: Require Regex matching in initial V2.
+- **ENG-NET-015 MUST**: TCP listener support configurable framing with newline default and advanced fixed/raw modes.
+- **ENG-NET-016 MUST**: UDP treat datagram payload as message without TCP framing.
+- **ENG-NET-017 MUST**: One Network Trigger may execute multiple Actions including cross-Screen actions.
+- **ENG-NET-018 MUST**: Support named outgoing Network Endpoints with transport/host/port/framing data.
+- **ENG-NET-019 MUST**: Preview use real TCP/UDP behavior, not a fake simulation layer.
+- **ENG-NET-020 MUST**: Network Monitor record timestamp, direction, source/destination, payload, matched trigger, resulting actions and outcome/unmatched status.
+- **ENG-NET-021 MUST**: Developer tools allow manual outgoing network command for diagnostics.
+- **ENG-SYNC-010 MUST**: Multi-PC installation support Master/Server and Client node roles.
+- **ENG-SYNC-011 MUST**: Node identity use a stable nodeId; IP may be used as address/security restriction but MUST NOT be the sole conceptual identity.
+- **ENG-SYNC-012 MUST**: Client maintain/re-establish long-lived connection to Master and re-synchronize clock after reconnect.
+- **ENG-SYNC-013 MUST**: Master track expected Clients and readiness.
+- **ENG-SYNC-014 MUST**: Initial installation startup support strict waiting for Required Clients before ready state.
+- **ENG-SYNC-015 SHOULD**: Architecture support Required/Optional node classification; default expected nodes may be Required.
+- **ENG-SYNC-016 MUST**: Distributed operations needing prepared resources use PREPARE → READY barrier → future timestamped EXECUTE/START.
+- **ENG-SYNC-017 MUST**: Clients convert Master execution time using established clock offset.
+- **ENG-SYNC-018 MUST**: Playlist/sequence advancement in synchronized playback repeat synchronization for the next item rather than only synchronizing initial playback.
+- **ENG-SYNC-019 MUST**: After installation is running, loss of one Client MUST NOT globally stop healthy nodes.
+- **ENG-SYNC-020 MUST**: Actions targeted to unavailable node fail safely and appear in diagnostics.
+- **ENG-SYNC-021 MUST**: Reconnected Client join future synchronized operations after clock sync; missed historical actions MUST NOT be automatically replayed.
+- **ENG-SYNC-022 MUST NOT**: Transparently synchronize ordinary Shared Player Variables across PCs in initial V2.
