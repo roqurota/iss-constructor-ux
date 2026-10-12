@@ -1,0 +1,15 @@
+{
+  "schema": "iss-constructor-v2-batch-policy/v1",
+  "batch_target_percent": 20,
+  "batch_denominator": "approved-stage acceptance items",
+  "max_fix_cycles": 5,
+  "quality_gate": {
+    "required": ["functional-playwright", "ux-heuristics", "visual-review"],
+    "ci_enforced": ["functional-playwright", "ux-heuristics"],
+    "human_or_agent_review_required": ["visual-review"],
+    "on_failure": "do-not-mark-complete",
+    "on_cycle_limit": "stop-and-report-blockers"
+  },
+  "current_stage": "UX Test 09 - Multiple Actions",
+  "stage_completion": "pending actual CI evidence and visual review"
+}
