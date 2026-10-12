@@ -23,6 +23,23 @@ with sync_playwright() as p:
     page.locator('#applyBehavior').click()
     page.wait_for_selector('#connectionPaths path[marker-end*="nav-arrow"]')
 
+    # UX09: multiple actions must coexist on one button, in order.
+    home.locator('.mockbutton').click()
+    page.locator('#behaviorAction').select_option('popup')
+    page.locator('#behaviorTarget').click()
+    page.locator('#targetOptions [data-target-id]', has_text='Info Popup').click()
+    page.locator('#applyBehavior').click()
+    page.locator('#behaviorAction').select_option('tcp')
+    page.locator('#tcpCommand').fill('LIGHTS_ON')
+    page.locator('#applyBehavior').click()
+    assert page.locator('.multi-action').count() == 3, "Actions were overwritten instead of appended"
+    assert page.locator('#connectionPaths path[marker-end*="nav-arrow"]').count() == 2, "Independent visual links missing"
+    assert 'LIGHTS_ON' in page.locator('#actionList').inner_text(), "TCP action missing"
+    page.locator('[data-action-up="2"]').click()
+    assert page.locator('.multi-action').count() == 3, "Reorder dropped an action"
+    page.locator('[data-action-remove="1"]').click()
+    assert page.locator('.multi-action').count() == 2, "Remove should delete one action only"
+
     def inspect():
         return page.evaluate("""() => {
           const btn = [...document.querySelectorAll('.node.page')].find(n => n.querySelector('.nodehead')?.textContent.includes('Home'))?.querySelector('.mockbutton');
