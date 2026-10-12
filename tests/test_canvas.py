@@ -156,6 +156,14 @@ with sync_playwright() as p:
     home = page.locator('.node.page').filter(has=page.locator('.nodehead', has_text='Home'))
     home.locator('.mockbutton').click()
     assert page.locator('.multi-action').count() == 0, "Reset retained saved actions"
+
+    # Reset must also clear localStorage; otherwise the deleted actions reappear on reload.
+    page.reload()
+    page.wait_for_selector('.node.page')
+    assert page.locator('#connectionPaths .link-hit[data-link]').count() == 0, "Reset actions returned after reload"
+    home = page.locator('.node.page').filter(has=page.locator('.nodehead', has_text='Home'))
+    home.locator('.mockbutton').click()
+    assert page.locator('.multi-action').count() == 0, "Reset persisted old button actions"
     assert not errors, f"JavaScript errors after interactions: {errors}"
 
     Path("test-artifacts").mkdir(exist_ok=True)
