@@ -92,6 +92,14 @@ with sync_playwright() as p:
     print(f"Arrow geometry after dragging: {moved}", flush=True)
     assert moved['withinButton'] and moved['overlayStacking'], f"Arrow failed after dragging Home: {moved}"
     assert abs(moved['start']['x'] - result['start']['x']) > 15, f"Arrow did not move with Home: {moved}"
+    # Clicking a Canvas connection must show its own Inspector, even if the button was selected.
+    home.locator('.mockbutton').click()
+    page.locator('#connectionPaths .link-hit[data-link]').first.dispatch_event('pointerdown', {'button': 0})
+    assert page.locator('#editLink').count() == 1, "Canvas connection did not open link Inspector"
+    page.locator('#editLink').click()
+    assert page.locator('#applyBehavior').inner_text() == 'Save Action', "Canvas Edit Action did not open the selected action"
+    page.locator('#cancelActionEdit').click()
+    assert page.locator('#applyBehavior').inner_text() == '+ Add Action', "Cancel edit did not reset form"
     assert not errors, f"JavaScript errors after interactions: {errors}"
 
     Path("test-artifacts").mkdir(exist_ok=True)
