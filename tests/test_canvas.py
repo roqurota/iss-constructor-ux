@@ -14,29 +14,53 @@ with sync_playwright() as p:
     assert page.locator(".node.page").count() >= 2, "Pages did not render"
     assert page.locator(".mockbutton").count() >= 1, "Button did not render"
 
-    # The button's own action should render above its parent Page,
-    # not merely have the right mathematical starting point.
-    result = page.evaluate("""() => {
-      const btn = document.querySelector('.mockbutton[data-trigger]');
-      const pageNode = btn.closest('.node.page');
-      const svg = document.querySelector('.link-layer');
-      const paths = [...document.querySelectorAll('#connectionPaths path[marker-end]')];
-      const nav = paths.find(p => p.getAttribute('marker-end')?.includes('nav-arrow'));
-      if (!nav) return {skip: 'No Navigate action in initial demo'};
-      const b = btn.getBoundingClientRect();
-      const p = nav.getPointAtLength(0);
-      const pt = svg.createSVGPoint(); pt.x = p.x; pt.y = p.y;
-      const start = pt.matrixTransform(svg.getScreenCTM());
-      const above = document.elementFromPoint(start.x, start.y);
-      return {withinButton: start.x >= b.left-3 && start.x <= b.right+3 &&
-              start.y >= b.top-3 && start.y <= b.bottom+3,
-              overlayAbovePage: svg.compareDocumentPosition(pageNode) & Node.DOCUMENT_POSITION_PRECEDING ? true : false,
-              sourceVisible: above === svg || svg.contains(above),
-              x:start.x, y:start.y, hit:above?.className?.baseVal || above?.className};
-    }""")
-    if "skip" not in result:
-        assert result["withinButton"], f"Navigate arrow does not start at button: {result}"
-        assert result["overlayAbovePage"], f"SVG is below Page in DOM: {result}"
+    # Create the action using the same controls a user uses.
+    home = page.locator('.node.page').filter(has=page.locator('.nodehead', has_text='Home'))
+    home.locator('.mockbutton').click()
+    page.locator('#behaviorAction').select_option('navigate')
+    page.locator('#behaviorTarget').click()
+    page.locator('#targetOptions [data-target-id]', has_text='Gallery').click()
+    page.locator('#applyBehavior').click()
+    page.wait_for_selector('#connectionPaths path[marker-end*="nav-arrow"]')
+
+    def inspect():
+        return page.evaluate("""() => {
+          const btn = [...document.querySelectorAll('.node.page')].find(n => n.querySelector('.nodehead')?.textContent.includes('Home'))?.querySelector('.mockbutton');
+          const pageNode = btn.closest('.node.page');
+          const svg = document.querySelector('.link-layer');
+          const nav = document.querySelector('#connectionPaths path[marker-end*="nav-arrow"]');
+          const b = btn.getBoundingClientRect();
+          const startPoint = nav.getPointAtLength(0);
+          const pt = svg.createSVGPoint(); pt.x = startPoint.x; pt.y = startPoint.y;
+          const start = pt.matrixTransform(svg.getScreenCTM());
+          const above = document.elementFromPoint(start.x, start.y);
+          return {
+            withinButton: start.x >= b.left-4 && start.x <= b.right+4 &&
+              start.y >= b.top-4 && start.y <= b.bottom+4,
+            overlayAfterPage: Boolean(svg.compareDocumentPosition(pageNode) & Node.DOCUMENT_POSITION_PRECEDING),
+            visibleAtOrigin: above === svg || svg.contains(above),
+            start: {x: start.x, y: start.y}, button: {x:b.left,y:b.top,width:b.width,height:b.height},
+            hit: above?.tagName
+          };
+        }""")
+
+    result = inspect()
+    assert result['withinButton'], f"Navigate arrow starts outside button: {result}"
+    assert result['overlayAfterPage'], f"SVG overlay is behind Page: {result}"
+    assert result['visibleAtOrigin'], f"Arrow origin is covered: {result}"
+
+    # Move Home via the actual drag gesture, then re-check the geometry.
+    handle = home.locator('.nodehead')
+    before = handle.bounding_box()
+    page.mouse.move(before['x'] + 40, before['y'] + 12)
+    page.mouse.down()
+    page.mouse.move(before['x'] + 100, before['y'] + 60, steps=8)
+    page.mouse.up()
+    moved = inspect()
+    assert moved['withinButton'] and moved['visibleAtOrigin'], f"Arrow failed after dragging Home: {moved}"
+    assert abs(moved['start']['x'] - result['start']['x']) > 15, f"Arrow did not move with Home: {moved}"
+    assert not errors, f"JavaScript errors after interactions: {errors}"
+
     Path("test-artifacts").mkdir(exist_ok=True)
     page.screenshot(path="test-artifacts/canvas.png", full_page=True)
     browser.close()
