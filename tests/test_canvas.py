@@ -1,10 +1,23 @@
 from pathlib import Path
+import sys
+import traceback
 from playwright.sync_api import sync_playwright
 
 URL = "http://127.0.0.1:8765/"
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
     page = browser.new_page(viewport={"width": 1440, "height": 900})
+    # Preserve browser evidence even if any assertion fails before the final screenshot.
+    previous_hook = sys.excepthook
+    def save_failure(exc_type, exc_value, exc_tb):
+        Path("test-artifacts").mkdir(exist_ok=True)
+        try:
+            page.screenshot(path="test-artifacts/canvas-failure.png", full_page=True, timeout=5000)
+            Path("test-artifacts/page.html").write_text(page.content(), encoding="utf-8")
+        except Exception as capture_error:
+            print(f"Could not capture failure evidence: {capture_error}", file=sys.stderr)
+        previous_hook(exc_type, exc_value, exc_tb)
+    sys.excepthook = save_failure
     errors = []
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.goto(URL)
