@@ -34,6 +34,12 @@ with sync_playwright() as p:
     page.locator('#applyBehavior').click()
     assert page.locator('.multi-action').count() == 3, "Actions were overwritten instead of appended"
     assert page.locator('#connectionPaths path[marker-end*="nav-arrow"]').count() == 2, "Independent visual links missing"
+    # Multiple outgoing links must be individually selectable, not stacked on one anchor.
+    anchors = page.locator('#connectionPaths path[marker-end*="nav-arrow"]').evaluate_all(
+        "(paths) => paths.map(p => { const a=p.getPointAtLength(0); return [a.x,a.y] })"
+    )
+    assert len(anchors) == 2 and anchors[0] != anchors[1], f"Outgoing links overlap at origin: {anchors}"
+    assert page.locator('#connectionPaths .link-hit[data-link]').count() == 2
     assert 'LIGHTS_ON' in page.locator('#actionList').inner_text(), "TCP action missing"
     page.locator('[data-action-up="2"]').click()
     assert page.locator('.multi-action').count() == 3, "Reorder dropped an action"
