@@ -37,8 +37,11 @@ with sync_playwright() as p:
     assert 'LIGHTS_ON' in page.locator('#actionList').inner_text(), "TCP action missing"
     page.locator('[data-action-up="2"]').click()
     assert page.locator('.multi-action').count() == 3, "Reorder dropped an action"
+    # After moving TCP up, remove TCP (index 1), preserving Navigate + Popup.
     page.locator('[data-action-remove="1"]').click()
     assert page.locator('.multi-action').count() == 2, "Remove should delete one action only"
+    assert 'Navigate to Page' in page.locator('.multi-action').first.inner_text()
+    assert 'Info Popup' in page.locator('.multi-action').last.inner_text()
 
     # Edit one existing action and preserve the other action and its ordering.
     page.locator('[data-action-edit="0"]').click()
