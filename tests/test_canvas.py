@@ -40,6 +40,17 @@ with sync_playwright() as p:
     page.locator('[data-action-remove="1"]').click()
     assert page.locator('.multi-action').count() == 2, "Remove should delete one action only"
 
+    # Edit one existing action and preserve the other action and its ordering.
+    page.locator('[data-action-edit="0"]').click()
+    assert page.locator('#applyBehavior').inner_text() == 'Save Action'
+    page.locator('#behaviorTarget').click()
+    page.locator('#targetOptions [data-target-id]', has_text='Details').click()
+    page.locator('#applyBehavior').click()
+    assert page.locator('.multi-action').count() == 2, "Editing duplicated or removed actions"
+    assert 'Details' in page.locator('.multi-action').first.inner_text(), "Edited target was not saved"
+    assert 'Info Popup' in page.locator('.multi-action').last.inner_text(), "Other action was changed"
+    assert page.locator('#connectionPaths path[marker-end*="nav-arrow"]').count() == 2, "Action editing lost links"
+
     def inspect():
         return page.evaluate("""() => {
           const btn = [...document.querySelectorAll('.node.page')].find(n => n.querySelector('.nodehead')?.textContent.includes('Home'))?.querySelector('.mockbutton');
