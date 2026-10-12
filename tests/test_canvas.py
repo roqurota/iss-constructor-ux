@@ -147,6 +147,15 @@ with sync_playwright() as p:
     assert 'Details' in page.locator('.multi-action').first.inner_text()
     assert 'Info Popup' in page.locator('.multi-action').last.inner_text()
     assert page.locator('#connectionPaths .link-hit[data-link]').count() == 2
+
+    # Reset should return to the demo without stale action selection or Inspector state.
+    page.once('dialog', lambda dialog: dialog.accept())
+    page.locator('#reset').click()
+    assert page.locator('#connectionPaths .link-hit[data-link]').count() == 0, "Reset retained old action links"
+    assert page.locator('#editLink').count() == 0, "Reset retained stale link Inspector"
+    home = page.locator('.node.page').filter(has=page.locator('.nodehead', has_text='Home'))
+    home.locator('.mockbutton').click()
+    assert page.locator('.multi-action').count() == 0, "Reset retained saved actions"
     assert not errors, f"JavaScript errors after interactions: {errors}"
 
     Path("test-artifacts").mkdir(exist_ok=True)
