@@ -129,6 +129,24 @@ with sync_playwright() as p:
     home.locator('.mockbutton').click()
     assert page.locator('.multi-action').count() == 1
     assert 'Details' in page.locator('.multi-action').first.inner_text(), "Navigate action was lost"
+
+    # Undo must restore the removed popup action and clear stale link selection.
+    page.keyboard.press('Control+z')
+    assert page.locator('#connectionPaths .link-hit[data-link]').count() == 2, "Undo did not restore deleted link"
+    assert page.locator('#editLink').count() == 0, "Undo retained stale link Inspector"
+    home.locator('.mockbutton').click()
+    assert page.locator('.multi-action').count() == 2, "Undo did not restore ordered button actions"
+
+    # Explicit Save must survive a reload with action types, order and targets intact.
+    page.locator('#save').click()
+    page.reload()
+    page.wait_for_selector('.node.page')
+    home = page.locator('.node.page').filter(has=page.locator('.nodehead', has_text='Home'))
+    home.locator('.mockbutton').click()
+    assert page.locator('.multi-action').count() == 2, "Saved actions missing after reload"
+    assert 'Details' in page.locator('.multi-action').first.inner_text()
+    assert 'Info Popup' in page.locator('.multi-action').last.inner_text()
+    assert page.locator('#connectionPaths .link-hit[data-link]').count() == 2
     assert not errors, f"JavaScript errors after interactions: {errors}"
 
     Path("test-artifacts").mkdir(exist_ok=True)
