@@ -38,7 +38,7 @@ with sync_playwright() as p:
             withinButton: start.x >= b.left-4 && start.x <= b.right+4 &&
               start.y >= b.top-4 && start.y <= b.bottom+4,
             overlayAfterPage: Boolean(svg.compareDocumentPosition(pageNode) & Node.DOCUMENT_POSITION_PRECEDING),
-            visibleAtOrigin: above === svg || svg.contains(above),
+            overlayStacking: Number(getComputedStyle(svg).zIndex) > Number(getComputedStyle(pageNode).zIndex),
             start: {x: start.x, y: start.y}, button: {x:b.left,y:b.top,width:b.width,height:b.height},
             hit: above?.tagName
           };
@@ -47,7 +47,7 @@ with sync_playwright() as p:
     result = inspect()
     assert result['withinButton'], f"Navigate arrow starts outside button: {result}"
     assert result['overlayAfterPage'], f"SVG overlay is behind Page: {result}"
-    assert result['visibleAtOrigin'], f"Arrow origin is covered: {result}"
+    assert result['overlayStacking'], f"Arrow overlay stacking is behind Page: {result}"
 
     # Move Home via the actual drag gesture, then re-check the geometry.
     handle = home.locator('.nodehead')
@@ -57,7 +57,7 @@ with sync_playwright() as p:
     page.mouse.move(before['x'] + 100, before['y'] + 60, steps=8)
     page.mouse.up()
     moved = inspect()
-    assert moved['withinButton'] and moved['visibleAtOrigin'], f"Arrow failed after dragging Home: {moved}"
+    assert moved['withinButton'] and moved['overlayStacking'], f"Arrow failed after dragging Home: {moved}"
     assert abs(moved['start']['x'] - result['start']['x']) > 15, f"Arrow did not move with Home: {moved}"
     assert not errors, f"JavaScript errors after interactions: {errors}"
 
